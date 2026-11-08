@@ -1,6 +1,10 @@
-# Unity i C# ABCD kviz – bliski ponuđeni odgovori
+# Unity i C# kviz
 
-Sadrži 170 pitanja, četiri ponuđene opcije, automatsku provjeru, nasumični ili izvorni redoslijed i pregled pogrešaka. Ponuđeni odgovori su prilagođeni temi svakog pitanja: slične Unity metode, komponente, svojstva, tipovi podataka, osi, prozori i kodni izrazi.
+Aplikacija sadrži:
+- 170 ABCD pitanja
+- 92 pitanja za upisivanje C# koda
+- automatsku provjeru pisanih odgovora (zanemaruje razmake i prijelome redaka)
+- rezultat i pregled pitanja za ponavljanje
 
 ## Pokretanje lokalno
 ```bash
@@ -8,9 +12,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Besplatno online
-1. Učitaj `app.py`, `questions.json` i `requirements.txt` u GitHub repository.
-2. Otvori https://share.streamlit.io/ i prijavi se GitHubom.
-3. Create app → odaberi repository → `app.py` → Deploy.
-
-Jedan odgovor u izvornoj skripti nije čitljiv i to se pitanje može preskočiti.
+Za besplatno online pokretanje možeš prenijeti ova četiri fajla na GitHub i povezati repozitorij sa Streamlit Community Cloud.

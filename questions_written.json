@@ -1,0 +1,466 @@
+[
+  {
+    "id": 1,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi pomaknuti za 2 prostorne jedinice po X osi.",
+    "answer": "transform.Translate(2f, 0f, 0f);"
+  },
+  {
+    "id": 2,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi pomaknuti za 3 prostorne jedinice po Y osi.",
+    "answer": "transform.Translate(0f, 3f, 0f);"
+  },
+  {
+    "id": 3,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi pomaknuti za 4 prostorne jedinice po Z osi.",
+    "answer": "transform.Translate(0f, 0f, 4f);"
+  },
+  {
+    "id": 4,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi zarotirati za 15 stupnjeva po X osi.",
+    "answer": "transform.Rotate(15f, 0f, 0f);"
+  },
+  {
+    "id": 5,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi zarotirati za 40 stupnjeva po Y osi.",
+    "answer": "transform.Rotate(0f, 40f, 0f);"
+  },
+  {
+    "id": 6,
+    "question": "Napišite liniju koda koja će objekt na kojem se ova skripta nalazi zarotirati za 75 stupnjeva po Z osi.",
+    "answer": "transform.Rotate(0f, 0f, 75f);"
+  },
+  {
+    "id": 7,
+    "question": "Napišite funkciju koju treba staviti u skriptu koja će se nalaziti na objektu kamere te koja će u svakom trenutku pozicionirati kameru na poziciju igrača čija je referenca pohranjena u varijabli \"igrac\".",
+    "answer": "void LateUpdate() {\n\n    transform.position = igrac.transform.position;\n\n}"
+  },
+  {
+    "id": 8,
+    "question": "Napišite funkciju koju treba staviti u skriptu koja će se nalaziti na objektu kamere te koja će u svakom trenutku pozicionirati kameru na poziciju igrača čija je referenca pohranjena u varijabli \"auto\". Potrebno je napraviti i malu korekciju: dodatno pomaknite poziciju kamere za -5 prostornih jedinica po Z osi.",
+    "answer": "void LateUpdate() {\n\n    transform.position = auto.transform.position + new Vector3(0f, 0f, -5f);\n\n}"
+  },
+  {
+    "id": 9,
+    "question": "Napišite sljedeću liniju koda: kreirajte varijablu imena \"toranj\" te u nju pohranite poziciju (3, 7, -2).",
+    "answer": "Vector3 toranj = new Vector3(3f, 7f, -2f);"
+  },
+  {
+    "id": 10,
+    "question": "Napišite sljedeću liniju koda: kreirajte varijablu imena \"smjer\" te u nju pohranite rotaciju (-30, 20, 45).",
+    "answer": "Quaternion smjer = Quaternion.Euler(-30f, 20f, 45f);"
+  },
+  {
+    "id": 11,
+    "question": "Napišite sljedeći odsječak programskog koda: na objektu koji je pohranjen u varijabli \"automobil\", dohvatite komponentu Sprite Renderer te sličicu objekta promijenite na sličicu koja je pohranjena u varijabli \"mustang\".",
+    "answer": "automobil.GetComponent<SpriteRenderer>().sprite = mustang;"
+  },
+  {
+    "id": 12,
+    "question": "Napišite sljedeći odsječak programskog koda: na objektu koji je pohranjen u varijabli \"kamion\", dohvatite komponentu Sprite Renderer te sličicu objekta promijenite na sličicu koja je pohranjena u varijabli \"mack\".",
+    "answer": "kamion.GetComponent<SpriteRenderer>().sprite = mack;"
+  },
+  {
+    "id": 13,
+    "question": "Napišite sljedeći odsječak programskog koda: na objektu koji je pohranjen u varijabli \"vrata\", dohvatiti komponentu Mesh Renderer koja se nalazi na objektu djeteta te promijenite materijal objekta na materijal koji se nalazi pohranjen u varijabli \"drvo\".",
+    "answer": "vrata.GetComponentInChildren<MeshRenderer>().material = drvo;"
+  },
+  {
+    "id": 14,
+    "question": "Napišite sljedeći odsječak programskog koda: na objektu koji je pohranjen u varijabli \"kugla\", dohvatite komponentu Mesh Renderer koja se nalazi na objektu djeteta te promijenite materijal objekta na materijal koji se nalazi pohranjen u varijabli \"plava\".",
+    "answer": "kugla.GetComponentInChildren<MeshRenderer>().material = plava;"
+  },
+  {
+    "id": 15,
+    "question": "Napišite sljedeći programski odsječak: na objektu čija je referenca pohranjena u varijabli \"vatromet\", dohvatite komponentu sustava čestica te započnite reprodukciju čestica.",
+    "answer": "vatromet.GetComponent<ParticleSystem>().Play();"
+  },
+  {
+    "id": 16,
+    "question": "Napišite sljedeći programski odsječak: ako igrač pritisne tipku G, zaustavite reprodukciju sustava čestica koji se nalazi na objektu čija je referenca pohranjena u varijabli \"prah\".",
+    "answer": "if (Input.GetKeyDown(KeyCode.G)) {\n\n    prah.GetComponent<ParticleSystem>().Stop();\n\n}"
+  },
+  {
+    "id": 17,
+    "question": "Napišite sljedeći programski odsječak: kada igrač pritisne tipku C, započnite reprodukciju zvučnog zapisa izvora zvuka koji se nalazi na objektu čija je referenca pohranjena u varijabli \"elisa\".",
+    "answer": "if (Input.GetKeyDown(KeyCode.C)) {\n\n    elisa.GetComponent<AudioSource>().Play();\n\n}"
+  },
+  {
+    "id": 18,
+    "question": "Napišite sljedeći programski odsječak: kada igrač pusti tipku D, zaustavite reprodukciju zvučnog zapisa izvora zvuka koji se nalazi na objektu čija je referenca pohranjena u varijabli \"brod\".",
+    "answer": "if (Input.GetKeyUp(KeyCode.D)) {\n\n    brod.GetComponent<AudioSource>().Stop();\n\n}"
+  },
+  {
+    "id": 19,
+    "question": "Napišite sljedeći programski odsječak: kreirajte funkciju imena \"ZamjenaSlike\" koja će na slikovnom objektu korisničkog sučelja, čija je referenca pohranjena u varijabli \"pozadina\", zamijeniti sliku na sliku čija je referenca pohranjena u varijabli \"zelena\".",
+    "answer": "void ZamjenaSlike() {\n\n    pozadina.GetComponent<Image>().sprite = zelena;\n\n}"
+  },
+  {
+    "id": 20,
+    "question": "Napišite sljedeći programski odsječak: kreirajte funkciju imena \"ZamjenaBoje\" koja prima jedan ulazni parametar imena boja, tipa Color. Na objektu na kojem se nalazi ova skripta, dohvatite komponentu Sprite Renderer te boju postavite na vrijednost ulaznog parametra funkcije.",
+    "answer": "void ZamjenaBoje(Color boja) {\n\n    GetComponent<SpriteRenderer>().color = boja;\n\n}"
+  },
+  {
+    "id": 21,
+    "question": "Napišite liniju koda kojom kreirate decimalnu varijablu imena \"skretanje\" te joj vrijednost postavljate na vrijednost ulazne osi koja je mapirana na pritisak tipki A i D. Koristite ulaznu vrijednost bez interpolacije.",
+    "answer": "float skretanje = Input.GetAxisRaw(\"Horizontal\");"
+  },
+  {
+    "id": 22,
+    "question": "Napišite liniju koda kojom kreirate decimalnu varijablu imena \"skakanje\" te joj vrijednost postavljate na vrijednost ulazne osi koja je mapirana na pritisak tipki A i D. Koristite ulaznu vrijednost s interpolacijom.",
+    "answer": "float skakanje = Input.GetAxis(\"Horizontal\");"
+  },
+  {
+    "id": 23,
+    "question": "Napišite liniju koda kojom kreirate decimalnu varijablu imena \"gas\" te joj vrijednost postavljate na vrijednost ulazne osi koja je mapirana na pritisak tipki W i S. Koristite ulaznu vrijednost bez interpolacije.",
+    "answer": "float gas = Input.GetAxisRaw(\"Vertical\");"
+  },
+  {
+    "id": 24,
+    "question": "Napišite liniju koda kojom kreirate decimalnu varijablu imena \"naprijed\" te joj vrijednost postavljate na vrijednost ulazne osi koja je mapirana na pritisak tipki W i S. Koristite ulaznu vrijednost s interpolacijom.",
+    "answer": "float naprijed = Input.GetAxis(\"Vertical\");"
+  },
+  {
+    "id": 25,
+    "question": "Napišite liniju koda kojom ćete u decimalnu varijablu \"skretanje\" upisati vrijednost skretanja u smjeru lijevo/desno (ulazna os, bez interpolacije) uzimajući u obzir brzinu skretanja koja je definirana varijablom \"brzina\" i uzimajući u obzir da se videoigra treba izvoditi istom brzinom na različitim uređajima.",
+    "answer": "skretanje = Input.GetAxisRaw(\"Horizontal\") * brzina * Time.deltaTime;"
+  },
+  {
+    "id": 26,
+    "question": "Napišite liniju koda kojom ćete u decimalnu varijablu \"pomicanje\" upisati vrijednost kretanja u smjeru naprijed/natrag (ulazna os, bez interpolacije) uzimajući u obzir brzinu skretanja koja je definirana varijablom \"brzina\" i uzimajući u obzir da se videoigra treba izvoditi istom brzinom na različitim uređajima.",
+    "answer": "pomicanje = Input.GetAxisRaw(\"Vertical\") * brzina * Time.deltaTime;"
+  },
+  {
+    "id": 27,
+    "question": "Napišite sljedeći programski odsječak: ako igrač pritisne tipku A, u konzolnom prozoru ispišite \"Lijevo\".",
+    "answer": "if (Input.GetKeyDown(KeyCode.A)) {\n\n    Debug.Log(\"Lijevo\");\n\n}"
+  },
+  {
+    "id": 28,
+    "question": "Napišite sljedeći programski odsječak: ako igrač pusti tipku S, u konzolnom prozoru ispišite \"Stop\".",
+    "answer": "if (Input.GetKeyUp(KeyCode.S)) {\n\n    Debug.Log(\"Stop\");\n\n}"
+  },
+  {
+    "id": 29,
+    "question": "Napišite sljedeći programski odsječak: sve dok igrač drži pritisnutu tipku W, varijablu \"pomak\" uvećavajte za vrijednost 2.",
+    "answer": "if (Input.GetKey(KeyCode.W)) {\n\n    pomak += 2;\n\n}"
+  },
+  {
+    "id": 30,
+    "question": "Napišite sljedeći programski odsječak: ako igrač pritisne lijevu tipku miša, pozivite funkciju imena \"Pucaj\".",
+    "answer": "if (Input.GetMouseButtonDown(0)) {\n\n    Pucaj();\n\n}"
+  },
+  {
+    "id": 31,
+    "question": "Napišite sljedeći programski odsječak: sve dok igrač drži pritisnutu lijevu tipku miša, varijablu \"rotacija\" smanjujte za vrijednost 3.",
+    "answer": "if (Input.GetMouseButton(0)) {\n\n    rotacija -= 3;\n\n}"
+  },
+  {
+    "id": 32,
+    "question": "Napišite sljedeći programski odsječak: kada igrač pusti desnu tipku miša, varijablu \"dosta\" postavite na logičku laž.",
+    "answer": "if (Input.GetMouseButtonUp(1)) {\n\n    dosta = false;\n\n}"
+  },
+  {
+    "id": 33,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"KrajIgre\" koja će učitati scenu koja se zove \"Izbornik\".",
+    "answer": "void KrajIgre() {\n\n    SceneManager.LoadScene(\"Izbornik\");\n\n}"
+  },
+  {
+    "id": 34,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"PonovnoUcitavanje\" koja će ponovno učitati trenutno aktivnu scenu.",
+    "answer": "void PonovnoUcitavanje() {\n\n    SceneManager.LoadScene(SceneManager.GetActiveScene().name);\n\n}"
+  },
+  {
+    "id": 35,
+    "question": "Napišite liniju koda kojom ćete kreirati polje imena \"tekstovi\" za pohranu tekstualnih objekata korisničkog sučelja (tip: TMP_Text). Kreirajte polje veličine 5 elemenata. Polje treba biti vidljivo unutar prozora Inspector (ne javna varijabla).",
+    "answer": "[SerializeField] TMP_Text[] tekstovi = new TMP_Text;"
+  },
+  {
+    "id": 36,
+    "question": "Napišite liniju koda kojom ćete kreirati polje imena \"slike\" za pohranu tekstualnih objekata korisničkog sučelja (tip: Image). Kreirajte polje veličine 10 elemenata. Polje treba biti vidljivo unutar prozora Inspector (ne javna varijabla).",
+    "answer": "[SerializeField] Image[] slike = new Image;"
+  },
+  {
+    "id": 37,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"Natpis\" koja će kao povratnu vrijednost vratiti sadržaj koji je upisn u tekstualnoj varijabli \"tekst\".",
+    "answer": "string Natpis() {\n\n    return tekst;\n\n}"
+  },
+  {
+    "id": 38,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"PostaviNaziv\" koja će primiti jedan tekstualni ulazni argument (naziv argumenta \"ulaz\") te će vrijednost tog argumenta upisati u varijablu \"tekst\".",
+    "answer": "void PostaviNaziv(string ulaz) {\n\n    tekst = ulaz;\n\n}"
+  },
+  {
+    "id": 39,
+    "question": "Napišite sljedeći odsječak programskog koda: u polju \"gumbi\" se nalaze reference na gumbe korisničkog sučelja (tip polja: gameObject). Pomoću for petlje (ime brojača \"i\"), onemogućite interakciju sa svim gumbima u polju (ne znamo točan broj elemenata u polju).",
+    "answer": "for (int i = 0; i < gumbi.Length; i++) {\n\n    gumbi[i].GetComponent<Button>().interactable = false;\n\n}"
+  },
+  {
+    "id": 40,
+    "question": "Napišite sljedeći odsječak programskog koda: u polju \"gumbi\" se nalaze reference na gumbe korisničkog sučelja (tip polja: gameObject). Pomoću for petlje (ime brojača \"i\"), omogućite interakciju (pretpostavka je da su gumbi prethodno onemogućeni za interakciju) sa svim gumbima u polju (ne znamo točan broj elemenata u polju).",
+    "answer": "for (int i = 0; i < gumbi.Length; i++) {\n\n    gumbi[i].GetComponent<Button>().interactable = true;\n\n}"
+  },
+  {
+    "id": 41,
+    "question": "Napišite sljedeći odsječak programskog koda: u polju \"slike\" se nalaze reference na slikovne objekte korisničkog sučelja (tip polja: gameObject). Pomoću for petlje (ime brojača \"i\"), svim slikovnim objektima u polju slike postavite na sliku čija se referenca nalazi u varijabli \"plaviRub\".",
+    "answer": "for (int i = 0; i < slike.Length; i++) {\n\n    slike[i].GetComponent<Image>().sprite = plaviRub;\n\n}"
+  },
+  {
+    "id": 42,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"Tajmer\" u kojoj varijablu \"odbrojavanje\" umanjujte za proteklo vrijeme izvođenja videoigre. Vrijednost varijable \"odbrojavanje\" ispišite putem konzolnog prozora.",
+    "answer": "void Tajmer() {\n\n    odbrojavanje -= Time.deltaTime;\n\n    Debug.Log(odbrojavanje);\n\n}"
+  },
+  {
+    "id": 43,
+    "question": "Napišite liniju koda koja će kreirati cjelobrojnu varijablu imena \"zivoti\" te joj postavite inicijalnu vrijednost na 5. Neka varijabla bude vidljiva unutar prozora Inspector.",
+    "answer": "[SerializeField] int zivoti = 5;"
+  },
+  {
+    "id": 44,
+    "question": "Napišite liniju koda koja će kreirati varijablu za upis decimalnog broja imena \"brzina\" te joj postavite inicijalnu vrijednost na 1,5. Neka varijabla bude vidljiva unutar prozora Inspector.",
+    "answer": "[SerializeField] float brzina = 1.5f;"
+  },
+  {
+    "id": 45,
+    "question": "Napišite liniju koda koja će kreirati logičku varijablu imena \"imamPaket\" te joj postavite inicijalnu vrijednost na logičku istinu. Neka varijabla bude vidljiva unutar prozora Inspector.",
+    "answer": "[SerializeField] bool imamPaket = true;"
+  },
+  {
+    "id": 46,
+    "question": "Napišite liniju koda koja će kreirati tekstualnu varijablu imena \"naziv\" te joj postavite inicijalnu vrijednost na tekst \"Transporter\". Neka varijabla bude vidljiva unutar prozora Inspector.",
+    "answer": "[SerializeField] string naziv = \"Transporter\";"
+  },
+  {
+    "id": 47,
+    "question": "Napišite sljedeći odsječak programskog koda: Ako objekt na kojem se nalazi ova skripta dođe u koliziju (fizička kolizija) s objektom koji ima oznaku (engl. Tag) \"Kamen\", tada uništite objekt s kojim ste se sudarili. Kontekst: 2D videoigra. Ulazni parametar funkcije: Collision2D collision.",
+    "answer": "void OnCollisionEnter2D (Collision2D collision) {\n\n    if (collision.gameObject.CompareTag(\"Kamen\")) {\n\n        Destroy(collision.gameObject);\n\n    }\n\n}"
+  },
+  {
+    "id": 48,
+    "question": "Napišite sljedeći odsječak programskog koda: Ako objekt na kojem se nalazi ova skripta dođe u koliziju (fizička kolizija) s objektom koji ima oznaku (engl. Tag) \"Kuca\", tada uništite objekt na kojem se nalazi ova skripta. Kontekst: 2D videoigra. Ulazni parametar funkcije: Collision2D collision.",
+    "answer": "void OnCollisionEnter2D (Collision2D collision) {\n\n    if (collision.gameObject.CompareTag(\"Kuca\")) {\n\n        Destroy(gameObject);\n\n    }\n\n}"
+  },
+  {
+    "id": 49,
+    "question": "Napišite sljedeći odsječak programskog koda: Ako objekt na kojem se nalazi ova skripta dođe u koliziju (sudarač ima uključenu opciju Is Trigger) s objektom koji ima oznaku (engl. Tag) \"Ubrzanje\", tada varijablu \"brzina\" postavite na vrijednost 15. Kontekst: 2D videoigra. Ulazni parametar funkcije: Collider2D collision.",
+    "answer": "void OnTriggerEnter2D (Collider2D collision) {\n\n    if (collision.CompareTag(\"Ubrzanje\")) {\n\n        brzina = 15;\n\n    }\n\n}"
+  },
+  {
+    "id": 50,
+    "question": "Napišite sljedeći odsječak programskog koda: Ako objekt na kojem se nalazi ova skripta dođe u koliziju (sudarač ima uključenu opciju Is Trigger) s objektom koji ima oznaku (engl. Tag) \"Neprijatelj\", tada na objektu s kojim ste se sudarili, dohvatite komponentu \"Neprijatelj\" te pozovite funkciju \"OduzmiZivote\" te kao ulaznu vrijednost funkciji proslijedite vrijednost 5. Kontekst: 2D videoigra. Ulazni parametar funkcije: Collider2D collision.",
+    "answer": "void OnTriggerEnter2D (Collider2D collision) {\n\n    if (collision.CompareTag(\"Neprijatelj\")) {\n\n        collision.GetComponent<Neprijatelj>().OduzmiZivote(5);\n\n    }\n\n}"
+  },
+  {
+    "id": 51,
+    "question": "Napišite sljedeći odsječak programskog koda: napišite funkciju koja će nakon što se objekt instancira, odmah na početku njegovog životnog vijeka, putem konzole ispisati poruku \"Objekt stvoren!\".",
+    "answer": "void Start() {\n\n    Debug.Log(\"Objekt stvoren!\");\n\n}"
+  },
+  {
+    "id": 52,
+    "question": "Napišite sljedeći odsječak programskog koda: Napišite funkciju koja će neprestano tijekom izvođenja videoigre u konzolnom prozoru ispisivati trenutno vrijeme izvođenja videoigre.",
+    "answer": "void Update() {\n\n    Debug.Log(Time.time);\n\n}"
+  },
+  {
+    "id": 53,
+    "question": "Napišite sljedeći odsječak programskog koda: u metodi koja služi za implementaciju simulacije fizike u svakom trenutku izvođenja videoigre definirajte sljedeće: ako je vrijednost varijable \"lijevo\" istina, na objekt imena \"rb\" (Rigidbody2D) pozovite funkciju za dodavanje okretnog momenta, jačina je definirana varijablom \"brzina\".",
+    "answer": "void FixedUpdate() {\n\n    if (lijevo) {\n\n        rb.AddTorque(brzina);\n\n    }\n\n}"
+  },
+  {
+    "id": 54,
+    "question": "Napišite sljedeći odsječak programskog koda: u metodi koja služi za implementaciju simulacije fizike u svakom trenutku izvođenja videoigre definirajte sljedeće: ako je vrijednost varijable \"desno\" istina, na objekt imena \"rb\" (Rigidbody2D) pozovite funkciju za dodavanje okretnog momenta, jačina je definirana varijablom \"brzina\". Primijenite negativnu vrijednost varijable \"brzina\".",
+    "answer": "void FixedUpdate() {\n\n    if (desno) {\n\n        rb.AddTorque(-brzina);\n\n    }\n\n}"
+  },
+  {
+    "id": 55,
+    "question": "Napišite sljedeći odsječak programskog koda: u skripti koja se nalazi na objektu kamere definirajte metodu koja se izvodi svakog trena izvođenja videoigre (kameru treba pomicati nakon izračuna svih pomaka ostalih objekata videoigre) te napišite liniju koda koja će poziciju kamere postavljati na poziciju objekta igrača (varijabla imena \"igrac\") primjenom linearne interpolacije dvodimenzionalnog vektora, a za brzinu pomaka koristite varijablu \"brzina\" te uzmite u obzir da brzina izvođenja treba biti jednaka na različitim uređajima. Kontekst: 2D videoigra.",
+    "answer": "void LateUpdate() {\n\n    transform.position = Vector2.Lerp(transform.position, igrac.transform.position, brzina * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 56,
+    "question": "Napišite sljedeći odsječak programskog koda: ako igrač drži pritisnutu tipku W, promijenite vrijednost varijable \"brzina\" linearnom interpolacijom od trenutne vrijednosti varijable \"visina\" do vrijednosti definiranom varijablom \"maxVisina\". Za brzinu promjene vrijednosti koristite varijablu \"brzina\" te uzmite u obzir da brzina promjene treba biti jednaka na različitim uređajima.",
+    "answer": "if (Input.GetKey(KeyCode.W)) {\n\n    visina = Mathf.Lerp(visina, maxVisina, brzina * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 57,
+    "question": "Napišite sljedeći odsječak programskog koda: ako objekt na kojem se nalazi ova skripta dođe u fizičku koliziju s objektom koji ima oznaku (engl. Tag) \"Kuca\", brzinu objekta (definirano varijablom \"brzina\") postavite na vrijednost 10. Kontekst: 2D videoigra.",
+    "answer": "void OnCollisionEnter2D(Collision2D collision) {\n\n    if (collision.gameObject.CompareTag(\"Kuca\")) {\n\n        brzina = 10;\n\n    }\n\n}"
+  },
+  {
+    "id": 58,
+    "question": "Napišite sljedeći odsječak programskog koda: ako objekt na kojem se nalazi ova skripta dođe u koliziju s objektom koji je okidač i koji ima oznaku (engl. Tag) \"Ubrzanje\", brzinu objekta (definirano varijablom \"brzina\") postavite na vrijednost 20. Kontekst: 2D videoigra.",
+    "answer": "void OnTriggerEnter2D(Collider2D collision) {\n\n    if (collision.CompareTag(\"Ubrzanje\")) {\n\n        brzina = 20;\n\n    }\n\n}"
+  },
+  {
+    "id": 59,
+    "question": "Napišite sljedeći odsječak programskog koda: ako igrač pritisne tipku M, pozovite funkciju \"Magija\" nakon vremenskog odmaka od 3 sekunde.",
+    "answer": "if (Input.GetKeyDown(KeyCode.M)) {\n\n    Invoke(nameof(Magija), 3f);\n\n}"
+  },
+  {
+    "id": 60,
+    "question": "Napišite liniju koda kojom ćete pozvati funkciju \"Stvaranje\" s određenim vremenskim odmakom i neprestanim ponavljanjem izvođenja. Prvo izvođenje funkcije se treba izvršiti nakon 5 sekundi, a onda svake 3 sekunde se treba ponavljati izvođenje te funkcije.",
+    "answer": "InvokeRepeating(nameof(Stvaranje), 5f, 3f);"
+  },
+  {
+    "id": 61,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"Ispucavanje\" u kojoj ćete dinamički instancirati objekt čija se referenca nalazi u varijabli \"metak\". Objekt instancirajte na poziciji i rotaciji objekta na kojem se nalazi ova skripta.",
+    "answer": "void Ispucavanje() {\n\n    Instantiate(metak, transform.position, transform.rotation);\n\n}"
+  },
+  {
+    "id": 62,
+    "question": "Napišite sljedeći odsječak programskog koda: kreirajte funkciju \"Ispucavanje\" u kojoj ćete dinamički instancirati objekt čija se referenca nalazi u varijabli \"projektil\". Objekt instancirajte na poziciji i rotaciji objekta oružja čija se referenca nalazi u varijabli \"oruzje\".",
+    "answer": "void Ispucavanje() {\n\n    Instantiate(projektil, oruzje.transform.position, oruzje.transform.rotation);\n\n}"
+  },
+  {
+    "id": 63,
+    "question": "Napišite sljedeći programski odsječak: kreirajte funkciju \"Stvaranje\" u kojoj dinamički instancirajte objekt videoigre čija se referenca nalazi u varijabli \"lik\", a pozicija i rotacija se nalaze pohranjeni u varijabli \"prostor\".",
+    "answer": "void Stvaranje() {\n\n    Instantiate(lik, prostor.position, prostor.rotation);\n\n}"
+  },
+  {
+    "id": 64,
+    "question": "Napišite sljedeći programski odsječak: kreirajte funkciju \"Stvaranje\" u kojoj dinamički instancirajte objekt videoigre čija se referenca nalazi u varijabli \"neprijatelj\", a pozicija i rotacija se nalaze pohranjeni u varijabli \"toranj\".",
+    "answer": "void Stvaranje() {\n\n    Instantiate(neprijatelj, toranj.position, toranj.rotation);\n\n}"
+  },
+  {
+    "id": 65,
+    "question": "Napišite sljedeći programski odsječak: implementirajte funkciju gdje ćete svakog trena provjeravati udaljenost između objekta čija se referenca nalazi u varijabli \"igrac\" i objekta čija se referenca nalazi u varijabli \"trkac\". Ako je udaljenost veća od 10 prostornih jedinica, u konzolnom prozoru ispišite poruku \"Hodaj\", inače ispišite poruku \"Stoji\". Kontekst: 2D videoigra.",
+    "answer": "void Update() {\n\n    if (Vector2.Distance(igrac.transform.position, trkac.transform.position) > 10) {\n\n        Debug.Log(\"Hodaj\");\n\n    } else {\n\n        Debug.Log(\"Stoji\");\n\n    }\n\n}"
+  },
+  {
+    "id": 66,
+    "question": "Napišite sljedeći programski odsječak: u varijabli \"anim\" se nalazi referenca na komponentu Animator. Implementirajte sljedeće: ako je vrijednost ulazne osi \"Horizontal\" različito od nule, tada na komponenti animatora postavite logički parametar \"Hodanje\" na istinu, u protivnom ga postavite na laž.",
+    "answer": "if (Input.GetAxis(\"Horizontal\") != 0) {\n\n    anim.SetBool(\"Hodanje\", true);\n\n} else {\n\n    anim.SetBool(\"Hodanje\", false);\n\n}"
+  },
+  {
+    "id": 67,
+    "question": "Napišite sljedeći programski odsječak: u varijabli \"anim\" se nalazi referenca na komponentu Animator. Implementirajte sljedeće: ako je vrijednost varijable \"vrijemeIspucavanja\" manje ili jednako nuli, tada na komponenti animatora aktivirajte okidač pod imenom \"Napad\".",
+    "answer": "if (vrijemeIspucavanja <= 0) {\n\n    anim.SetTrigger(\"Napad\");\n\n}"
+  },
+  {
+    "id": 68,
+    "question": "Napišite sljedeći programski odsječak: u varijabli \"ulaz\" tipa Vector2 se nalaze dohvaćene ulazne vrijednosti s ulaznih osi \"Horizontal\" i \"Vertical\". Normalizirajte vektor kako biste osigurali da dobijete jedinički vektor bez obzira na smjer kretanja igrača.",
+    "answer": "ulaz = ulaz.normalized;",
+    "accepted_answers": [
+      "ulaz = ulaz.normalized;",
+      "ulaz.Normalize();"
+    ]
+  },
+  {
+    "id": 69,
+    "question": "Napišite sljedeći programski odsječak: implementirajte provjeru u svakom trenutku izvođenja videoigre je li igrač pritisnuo lijevu tipku miša. Ako je, tada pozovite funkciju \"Ispucaj\" te joj kao parametar proslijedite vrijednost varijable \"steta\".",
+    "answer": "void Update() {\n\n    if (Input.GetMouseButtonDown(0)) {\n\n        Ispucaj(steta);\n\n    }\n\n}"
+  },
+  {
+    "id": 70,
+    "question": "Napišite sljedeći programski odsječak: implementirajte provjeru u svakom trenutku izvođenja videoigre je li pritisnuta lijeva tipka miša. Ako je, tada varijablu \"vrijeme\" uvećavajte za proteklo vrijeme.",
+    "answer": "void Update() {\n\n    if (Input.GetMouseButton(0)) {\n\n        vrijeme += Time.deltaTime;\n\n    }\n\n}"
+  },
+  {
+    "id": 71,
+    "question": "Napišite sljedeći programski odsječak: ako igrač pritisne desnu tipku miša, logičku varijablu \"stit\" postavite na istinu, a kada igrač pusti desnu tipku miša, istu varijablu postavite na laž.",
+    "answer": "if (Input.GetMouseButtonDown(1)) {\n\n    stit = true;\n\n}\n\nif (Input.GetMouseButtonUp(1)) {\n\n    stit = false;\n\n}"
+  },
+  {
+    "id": 72,
+    "question": "Napišite sljedeći programski odsječak: kreirajte varijablu \"ograniceniX\" u koju ćete upisati vrijednost iz varijable \"ulazX\" ali ćete vrijednost pomoću metode Clamp ograničiti da bude unutar raspona varijabli \"minX\" i \"maxX\".",
+    "answer": "ograniceniX = Mathf.Clamp(ulazX, minX, maxX);"
+  },
+  {
+    "id": 73,
+    "question": "Napišite sljedeći programski odsječak: ako igrač drži pritisnutu lijevu tipku miša, vrijednost varijable \"brzina\" mijenjajte linearnom interpolacijom od trenutne vrijednosti prema vrijednosti 100, na temelju vrijednosti varijable \"brzinaPromjene\" uzimajući u obzir da brzina izvođenja bude jednaka na svim uređajima.",
+    "answer": "if (Input.GetMouseButton(0)) {\n\n    brzina = Mathf.Lerp(brzina, 100, brzinaPromjene * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 74,
+    "question": "Napišite sljedeći programski odsječak: ako igrač drži pritisnutu desnu tipku miša, vrijednost varijable \"visina\" mijenjajte linearnom interpolacijom od trenutne vrijednosti prema vrijednosti 0, na temelju vrijednosti varijable \"brzinaPromjene\" uzimajući u obzir da brzina izvođenja bude jednaka na svim uređajima.",
+    "answer": "if (Input.GetMouseButton(1)) {\n\n    visina = Mathf.Lerp(visina, 0, brzinaPromjene * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 75,
+    "question": "Napišite sljedeći programski odsječak: ako igrač drži pritisnutu lijevu tipku miša, vrijednost varijable \"pozicija\" mijenjajte linearnom interpolacijom od vrijednosti 0 do vrijednosti 10, na temelju varijable \"brzinaPromjene\" uzimajući u obzir da brzina izvođenja bude jednaka na svim uređajima.",
+    "answer": "if (Input.GetMouseButton(0)) {\n\n    pozicija = Mathf.Lerp(0, 10, brzinaPromjene * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 76,
+    "question": "Napišite sljedeći programski odsječak: ako igrač drži pritisnutu desnu tipku miša, mijenjajte vrijednost varijable \"rotacija\" linearnom interpolacijom od trenutne vrijednosti do vrijednosti 360, na temelju varijable \"brzinaPromjene\" uzimajući u obzir da brzina izvođenja bude jednaka na svim uređajima. Kada igrač pusti desnu tipku miša, vrijednost ponovno interpolirajte na isti način, no prema vrijednosti 0.",
+    "answer": "if (Input.GetMouseButton(1)) {\n\n    rotacija = Mathf.Lerp(rotacija, 360, brzinaPromjene * Time.deltaTime);\n\n} else {\n\n    rotacija = Mathf.Lerp(rotacija, 0, brzinaPromjene * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 77,
+    "question": "Napišite sljedeći programski odsječak: na objektu na kojem se nalazi ova skripta se nalazi komponenta RigidBody te se referenca na ovu komponentu nalazi u varijabli \"rb\". U metodi koja se izvršava na početku životnog vijeka objekta, dodajte impulsnu silu na ovaj objekt u smjeru objekta prema naprijed na temelju vrijednosti varijable \"brzina\".",
+    "answer": "void Start() {\n\n    rb.AddForce(transform.forward * brzina, ForceMode.Impulse);\n\n}"
+  },
+  {
+    "id": 78,
+    "question": "Napišite sljedeći programski odsječak: na objektu na kojem se nalazi ova skripta se nalazi komponenta RigidBody te se referenca na ovu komponentu nalazi u varijabli \"rb\". U metodi koja se izvršava na početku životnog vijeka objekta, dodajte impulsnu silu na ovaj objekt u smjeru objekta prema gore na temelju vrijednosti varijable \"brzina\".",
+    "answer": "void Start() {\n\n    rb.AddForce(transform.up * brzina, ForceMode.Impulse);\n\n}"
+  },
+  {
+    "id": 79,
+    "question": "Napišite sljedeći programski odsječak: na objektu na kojem se nalazi ova skripta se nalazi komponenta RigidBody te se referenca na ovu komponentu nalazi u varijabli \"rb\". Ako igrač pritisne tipku \"B\", ispišite u konzolnom prozoru brzinu kretanja objekta na kojem se ova skripta nalazi.",
+    "answer": "if (Input.GetKeyDown(KeyCode.B)) {\n\n    Debug.Log(rb.velocity.magnitude);\n\n}"
+  },
+  {
+    "id": 80,
+    "question": "Napišite sljedeći programski odsječak: na objektu na kojem se nalazi ova skripta se nalazi komponenta RigidBody te se referenca na ovu komponentu nalazi u varijabli \"rb\". Ako igrač pritisne tipku \"X\", zaustavite kretanje objekta na kojem se ova skripta nalazi.",
+    "answer": "if (Input.GetKeyDown(KeyCode.X)) {\n\n    rb.velocity = [suspicious link removed];\n\n}"
+  },
+  {
+    "id": 81,
+    "question": "Napišite sljedeći programski odsječak: u 2D videoigri, u metodi koja se neprestano izvodi tijekom izvođenja videoigre, zarotirajte objekt u varijabli \"oruzje\" prema poziciji miša.",
+    "answer": "void Update() {\n\n    Vector2 smjer = Camera.main.ScreenToWorldPoint(Input.mousePosition) - oruzje.transform.position;\n\n    float kut = Mathf.Atan2(smjer.y, smjer.x) * Mathf.Rad2Deg;\n\n    oruzje.transform.rotation = Quaternion.Euler(0f, 0f, kut - 90f);\n\n}"
+  },
+  {
+    "id": 82,
+    "question": "Napišite sljedeći programski odsječak: u 2D videoigri, u metodi koja se neprestano izvodi tijekom izvođenja videoigre, zarotirajte objekt u varijabli \"metak\" prema poziciji igrača u varijabli \"igrac\".",
+    "answer": "void Update() {\n\n    Vector2 smjer = igrac.transform.position - metak.transform.position;\n\n    float kut = Mathf.Atan2(smjer.y, smjer.x) * Mathf.Rad2Deg;\n\n    metak.transform.rotation = Quaternion.Euler(0f, 0f, kut - 90f);\n\n}"
+  },
+  {
+    "id": 83,
+    "question": "Napišite sljedeći programski odsječak: u varijabli \"igrac\" imate pohranjenu referencu na objekt igrača, a u varijabli \"sismis\" imate pohranjenu referencu na objekt šišmiša. Implementirajte funkciju u kojoj će se šišmiš svakog trena pomicati prema poziciji igrača brzinom koja je definirana u varijabli \"brzina\". Kontekst: 2D videoigra. Koristite metodu MoveTowards.",
+    "answer": "void Update() {\n\n    sismis.transform.position = Vector2.MoveTowards(sismis.transform.position, igrac.transform.position, brzina * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 84,
+    "question": "Napišite sljedeći programski odsječak: u varijabli \"igrac\" imate pohranjenu referencu na objekt igrača, a u varijabli \"carobnjak\" imate pohranjenu referencu na objekt čarobnjaka. Implementirajte funkciju u kojoj će se čarobnjak svakog trena pomicati prema poziciji igrača brzinom koja je definirana u varijabli \"hodanje\". Kontekst: 2D videoigra. Koristite metodu MoveTowards.",
+    "answer": "void Update() {\n\n    carobnjak.transform.position = Vector2.MoveTowards(carobnjak.transform.position, igrac.transform.position, hodanje * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 85,
+    "question": "Napišite sljedeći programski odsječak: u trodimenzionalnoj videoigri, objekt u varijabli \"top\" zarotirajte izravno prema poziciji igrača (referenca u varijabli \"igrac\").",
+    "answer": "top.transform.LookAt(igrac.transform);"
+  },
+  {
+    "id": 86,
+    "question": "Napišite sljedeći programski odsječak: u trodimenzionalnoj videoigri, pozicija objekta igrača se nalazi pohranjena u varijabli \"igrac\" (tipa Transform). Implementirajte sljedeće: ako je objekt igrača udaljen manje od 10 prostornih jedinica od objekta na kojem se ova skripta nalazi, zarotirajte objekt na kojem se ova skripta nalazi prema poziciji igrača.",
+    "answer": "if (Vector3.Distance(transform.position, igrac.position) < 10) {\n\n    transform.LookAt(igrac);\n\n}"
+  },
+  {
+    "id": 87,
+    "question": "Napišite sljedeći programski odsječak: područje kretanja je zadano varijablama minX, maxX, minY i maxY. U metodi Start generirajte nasumičnu točku u ovom području u javnu varijablu \"novaPozicija\" tipa Vector2. U metodi Update, korištenjem metode MoveTowards pomičite objekt čija se referenca nalazi u varijabli \"lik\" od trenutne pozicije prema generiranoj točci na temelju varijable \"brzina\" uzimajući u obzir da brzina bude jednaka prilikom izvođenja na svim uređajima.",
+    "answer": "void Start() {\n\n    novaPozicija = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));\n\n}\n\nvoid Update() {\n\n    lik.transform.position = Vector2.MoveTowards(lik.transform.position, novaPozicija, brzina * Time.deltaTime);\n\n}"
+  },
+  {
+    "id": 88,
+    "question": "Napišite sljedeći programski odsječak: područje kretanja je zadano varijablama minX, maxX, minY i maxY. U metodi Start generirajte nasumičnu točku u ovom području u javnu varijablu \"novaPozicija\" tipa Vector2. U metodi Update, ako udaljenost između objekta u varijabli \"igrac\" i objekta u varijabli \"lik\" postane manja od 5, teleportirajte objekt u varijabli \"lik\" na nasumično generiranu poziciju.",
+    "answer": "void Start() {\n\n    novaPozicija = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));\n\n}\n\nvoid Update() {\n\n    if (Vector2.Distance(igrac.transform.position, lik.transform.position) < 5) {\n\n        lik.transform.position = novaPozicija;\n\n    }\n\n}"
+  },
+  {
+    "id": 89,
+    "question": "Napišite sljedeći programski odsječak: kreirajte korutinu \"Teleportiraj\" koja će neprestano, svake dvije sekunde, objekt igrača čija je referenca pohranjena u varijabli \"igrac\" teleportirati na nasumičnu poziciju u rasponu od -10 do 10 po X osi i -5 do 5 po Y osi.",
+    "answer": "IEnumerator Teleportiraj() {\n\n    while(true) {\n\n        igrac.transform.position = new Vector2(Random.Range(-10f, 10f), Random.Range(-5f, 5f));\n\n        yield return new WaitForSeconds(2f);\n\n    }\n\n}"
+  },
+  {
+    "id": 90,
+    "question": "Napišite sljedeći programski odsječak: kreirajte korutinu \"Teleportiraj\" koja će neprestano, svake tri sekunde, objekt neprijatelja čija je referenca pohranjena u varijabli \"neprijatelj\" teleportirati na nasumičnu poziciju u rasponu od -7 do 7 po X osi i -3 do 3 po Y osi.",
+    "answer": "IEnumerator Teleportiraj() {\n\n    while(true) {\n\n        neprijatelj.transform.position = new Vector2(Random.Range(-7f, 7f), Random.Range(-3f, 3f));\n\n        yield return new WaitForSeconds(3f);\n\n    }\n\n}"
+  },
+  {
+    "id": 91,
+    "question": "Napišite sljedeći programski odsječak: na razini se nalazi navigacijsko područje, a objekt u varijabli \"stvor\" na sebi ima komponentu navigacijskog agenta. U skripti se referenca na komponentu NavMeshAgent nalazi u varijabli \"agent\". Početna pozicija stvora je pohranjena u varijabli \"pocetnaPozicija\", tipa Vector3. Referenca na objekt igrača se nalazi u varijabli \"igrac\". Implementirajte sljedeće: u metodi koja se neprestano izvodi tijekom izvođenja videoigre, ako je udaljenost između igrača i stvora manja od 10, pomičite stvora prema poziciji igrača, u protivnom neka se stvor pomiče prema početnoj poziciji.",
+    "answer": "void Update() {\n\n    if (Vector3.Distance(stvor.transform.position, igrac.transform.position) < 10) {\n\n        agent.destination = igrac.transform.position;\n\n    } else {\n\n        agent.destination = pocetnaPozicija;\n\n    }\n\n}"
+  },
+  {
+    "id": 92,
+    "question": "Napišite sljedeći programski odsječak: na razini se nalazi navigacijsko područje, a objekt u varijabli \"zombij\" na sebi ima komponentu navigacijskog agenta. U skripti se referenca na komponentu NavMeshAgent nalazi u varijabli \"agent\". U polju \"odredista\", tipa Vector3, se nalazi nekoliko različitih pozicija na razini videoigre. Implementirajte sljedeće: u metodi Start, odaberite nasumičnu poziciju iz polja pozicija te postavite odredište agenta na tu poziciju.",
+    "answer": "void Start() {\n\n    agent.destination = odredista[Random.Range(0, odredista.Length)];\n\n}"
+  }
+]
