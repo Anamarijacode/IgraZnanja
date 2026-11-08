@@ -1,153 +1,71 @@
-import streamlit as st
-import json
-import re
-import unicodedata
+import streamlit as st, json, re, unicodedata, random
 from pathlib import Path
-
-st.set_page_config(page_title="Unity i C# | Kviz", page_icon="🎮", layout="centered")
-
+st.set_page_config(page_title="Unity i C# ABCD kviz", page_icon="🎮", layout="centered")
 @st.cache_data
-def load_questions():
-    data = json.loads(Path(__file__).with_name("questions.json").read_text(encoding="utf-8"))
-    return data
-
-def normalize(value: str) -> str:
-    value = unicodedata.normalize("NFKC", value or "").casefold().strip()
-    value = value.replace("`", "").replace("’", "'").replace("“", '"').replace("”", '"')
-    value = re.sub(r"\s+", " ", value)
-    # Ignore harmless whitespace differences around code punctuation.
-    value = re.sub(r"\s*([(),;<>])\s*", r"\1", value)
-    return value.strip().rstrip(" .;")
-
-def is_correct(user_answer: str, expected: str) -> bool:
-    user = normalize(user_answer)
-    expected = normalize(expected)
-    if not user:
-        return False
-
-    # The source sometimes lists equivalent alternatives separated by slash.
-    alternatives = [part.strip() for part in re.split(r"\s*/\s*", expected) if part.strip()]
-    return any(user == part for part in alternatives) or user == expected
-
-def init_state():
-    defaults = {
-        "index": 0,
-        "results": {},
-        "checked": False,
-        "last_user_answer": "",
-        "mode": "all",
-        "order": list(range(len(load_questions()))),
-    }
-    for key, value in defaults.items():
-        if key not in st.session_state:
-            st.session_state[key] = value
-
-questions = load_questions()
-init_state()
-total = len(questions)
-
-st.title("🎮 Unity i C#")
-st.caption(f"Interaktivni kviz iz tvoje skripte • svih {total} pitanja")
-
+def load():
+    return json.loads(Path(__file__).with_name("questions.json").read_text(encoding="utf-8"))
+qs=load(); N=len(qs)
+def fresh():
+    st.session_state.order=list(range(N)); random.shuffle(st.session_state.order)
+    st.session_state.pos=0; st.session_state.answers={}
+if "order" not in st.session_state: fresh()
+st.title("🎮 Unity i C# | ABCD kviz")
+st.caption("170 pitanja iz tvoje skripte • automatska provjera • rezultat i ponavljanje")
 with st.sidebar:
-    st.header("Tvoj napredak")
-    answered = len(st.session_state.results)
-    correct = sum(1 for x in st.session_state.results.values() if x["correct"] is True)
-    wrong = sum(1 for x in st.session_state.results.values() if x["correct"] is False)
-    st.metric("Odgovoreno", f"{answered}/{total}")
-    st.metric("Točno", correct)
-    st.metric("Za ponavljanje", wrong)
-    st.progress(answered / total if total else 0)
-    st.divider()
-    if st.button("🔄 Kreni ispočetka", use_container_width=True):
-        for key in ["index", "results", "checked", "last_user_answer", "mode", "order"]:
-            st.session_state.pop(key, None)
-        st.rerun()
-
-def show_finish():
-    st.success("Bravo! Došla si do kraja kviza.")
-    answered = len(st.session_state.results)
-    correct = sum(1 for x in st.session_state.results.values() if x["correct"] is True)
-    wrong = sum(1 for x in st.session_state.results.values() if x["correct"] is False)
-    skipped = sum(1 for x in st.session_state.results.values() if x["correct"] is None)
-    st.subheader(f"Rezultat: {correct} / {answered}")
-    if answered:
-        st.write(f"Točno: **{correct}** · Netočno: **{wrong}** · Preskočeno/nečitljivo: **{skipped}**")
-        st.write(f"Uspješnost među provjerenim odgovorima: **{round(correct / max(correct + wrong, 1) * 100)}%**")
-    else:
-        st.info("Još nema odgovorenih pitanja.")
-    missed = [i for i, r in st.session_state.results.items() if r["correct"] is False]
-    if missed:
-        st.subheader("Pitanja za ponavljanje")
-        for i in missed:
-            st.markdown(f"**{i+1}. {questions[i]['question']}**")
-            st.write(f"Točan odgovor: `{questions[i]['answer']}`")
-    if st.button("Ponovi cijeli kviz", type="primary"):
-        st.session_state.index = 0
-        st.session_state.results = {}
-        st.session_state.checked = False
-        st.session_state.last_user_answer = ""
-        st.rerun()
-
-idx = st.session_state.index
-if idx >= total:
-    show_finish()
+    done=len(st.session_state.answers)
+    good=sum(v["ok"] is True for v in st.session_state.answers.values())
+    bad=sum(v["ok"] is False for v in st.session_state.answers.values())
+    st.header("Tvoj rezultat")
+    st.metric("Odgovoreno",f"{done}/{N}")
+    st.metric("Točno",good); st.metric("Netočno",bad)
+    st.progress(done/N)
+    if st.button("🔀 Novi nasumični pokušaj",use_container_width=True):
+        fresh(); st.rerun()
+    if st.button("♻️ Resetiraj redom",use_container_width=True):
+        st.session_state.order=list(range(N)); st.session_state.pos=0; st.session_state.answers={}; st.rerun()
+if st.session_state.pos>=N:
+    good=sum(v["ok"] is True for v in st.session_state.answers.values())
+    bad=sum(v["ok"] is False for v in st.session_state.answers.values())
+    skipped=sum(v["ok"] is None for v in st.session_state.answers.values())
+    st.balloons(); st.header("🏁 Kviz završen!")
+    st.metric("Rezultat",f"{good}/{N}",f"{round(good/N*100)}%")
+    st.write(f"Točno: {good} · Netočno: {bad} · Preskočeno: {skipped}")
+    st.subheader("Pitanja za ponavljanje")
+    for qi,r in st.session_state.answers.items():
+        if r["ok"] is not True:
+            q=qs[qi]
+            with st.expander(f"{q['id']}. {q['question']}"):
+                st.write("Tvoj odgovor:",r["choice"])
+                st.write("Odgovor iz skripte:",q["answer"])
+    if st.button("Ponovi kviz",type="primary"): fresh(); st.rerun()
     st.stop()
-
-q = questions[idx]
-expected = q["answer"]
-unavailable = "[suspicious link removed]" in expected
-
-st.progress(idx / total)
-st.caption(f"Pitanje {idx + 1} od {total}")
-
-st.markdown(f"### {q['question']}")
-
-if unavailable:
-    st.warning("Odgovor za ovo pitanje nije čitljiv u izvornoj skripti. Neću izmišljati točan odgovor. Možeš ga preskočiti.")
-
-if idx in st.session_state.results:
-    result = st.session_state.results[idx]
-    if result["correct"] is True:
-        st.success("Točno! Odlično. ✅")
-    elif result["correct"] is False:
-        st.error("Nije točno. Nema veze, ovo ide na ponavljanje.")
-        st.info(f"Točan odgovor prema tvojoj skripti: **{expected}**")
-    else:
-        st.warning("Pitanje je preskočeno jer odgovor u izvornoj skripti nije čitljiv.")
-    if st.button("Sljedeće pitanje ➜", type="primary", use_container_width=True):
-        st.session_state.index += 1
+idx=st.session_state.order[st.session_state.pos]; q=qs[idx]
+st.progress(st.session_state.pos/N)
+st.caption(f"Pitanje {st.session_state.pos+1} od {N} • Izvorno pitanje #{q['id']}")
+st.markdown("### "+q["question"])
+prev=st.session_state.answers.get(idx)
+if q["unavailable"]:
+    st.warning("Odgovor u izvornoj skripti nije čitljiv. Ovo pitanje možeš preskočiti.")
+    if prev is None and st.button("Preskoči pitanje",type="primary"):
+        st.session_state.answers[idx]={"ok":None,"choice":"Preskočeno"}; st.rerun()
+elif prev is None:
+    letters=["A","B","C","D"]
+    choice=st.radio("Odaberi jedan odgovor:",range(4),format_func=lambda i:f"{letters[i]}) {q['options'][i]}",index=None,key=f"choice_{idx}")
+    if st.button("Provjeri odgovor",type="primary",use_container_width=True,disabled=choice is None):
+        st.session_state.answers[idx]={"ok":choice==q["correct_index"],"choice":f"{letters[choice]}) {q['options'][choice]}"}
         st.rerun()
 else:
-    with st.form(key=f"answer_form_{idx}"):
-        user_answer = st.text_input(
-            "Tvoj odgovor",
-            placeholder="Upiši odgovor ovdje…",
-            key=f"answer_{idx}",
-            disabled=unavailable,
-        )
-        submitted = st.form_submit_button("Provjeri odgovor", type="primary", use_container_width=True)
-    if submitted:
-        if unavailable:
-            st.session_state.results[idx] = {"correct": None, "answer": ""}
-        elif not user_answer.strip():
-            st.warning("Upiši odgovor prije provjere.")
-            st.stop()
-        else:
-            ok = is_correct(user_answer, expected)
-            st.session_state.results[idx] = {"correct": ok, "answer": user_answer}
-        st.rerun()
-
+    if prev["ok"]: st.success("Točno! 🎉")
+    else: st.error("Nije točno. Ovo pitanje ide na ponavljanje.")
+    st.write("Tvoj odgovor:",prev["choice"])
+    st.info("Točan odgovor prema skripti: "+q["answer"])
 st.divider()
-col1, col2 = st.columns(2)
-with col1:
-    if st.button("⬅ Prethodno", disabled=(idx == 0), use_container_width=True):
-        st.session_state.index -= 1
-        st.rerun()
-with col2:
-    if idx in st.session_state.results:
-        if st.button("Nastavi ➜", use_container_width=True):
-            st.session_state.index += 1
-            st.rerun()
-
-st.caption("Odgovori se provjeravaju prema odgovorima iz tvoje izvorne skripte. Velika/mala slova i višak razmaka ne utječu na provjeru. Kod odgovora je važno napisati ispravan izraz.")
+c1,c2=st.columns(2)
+with c1:
+    if st.button("⬅ Prethodno",disabled=st.session_state.pos==0,use_container_width=True):
+        st.session_state.pos-=1; st.rerun()
+with c2:
+    if st.button("Sljedeće ➜",type="primary",use_container_width=True):
+        if idx not in st.session_state.answers: st.warning("Prvo odaberi odgovor ili preskoči pitanje.")
+        else: st.session_state.pos+=1; st.rerun()
+st.caption("Pitanja i točni odgovori preuzeti su iz tvoje skripte. ABCD distraktori su odabrani iz ostalih odgovora u istoj skripti.")

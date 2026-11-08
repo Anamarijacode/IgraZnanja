@@ -1,682 +1,2206 @@
 [
   {
+    "id": 1,
     "question": "Koja kratica se koristi za aktiviranje alata za pomicanje objekata unutar prozora scene?",
-    "answer": "W"
+    "answer": "W",
+    "options": [
+      "Normalize",
+      "W",
+      "X os",
+      "GetAxis"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 2,
     "question": "Koja kratica se koristi za aktiviranje alata za rotiranje objekata unutar pogleda scene?",
-    "answer": "E"
+    "answer": "E",
+    "options": [
+      "`=`",
+      "`pomicanje != 0`",
+      "E",
+      "Set Native Size"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 3,
     "question": "Koja kratica se koristi za aktiviranje alata za skaliranje objekta unutar prozora scene?",
-    "answer": "R"
+    "answer": "R",
+    "options": [
+      "float",
+      "R",
+      "Edge Collider 2D",
+      "string"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 4,
     "question": "Putem koje komponente se definira pozicija objekta u prostoru?",
-    "answer": "Transform"
+    "answer": "Transform",
+    "options": [
+      "Transform",
+      "`StartCoroutine`",
+      "Order in Layer",
+      "`Time.deltaTime`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 5,
     "question": "Putem koje komponente se definira rotacija objekta u prostoru?",
-    "answer": "Transform"
+    "answer": "Transform",
+    "options": [
+      "`OnCollisionExit2D`",
+      "void",
+      "Transform",
+      "Animator"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 6,
     "question": "Kojeg tipa je svojstvo Position u komponenti Transform?",
-    "answer": "Vector3"
+    "answer": "Vector3",
+    "options": [
+      "Audio Source",
+      "-1",
+      "Vector3",
+      "SetTrigger"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 7,
     "question": "Kojeg tipa je svojstvo Rotation u komponenti Transform?",
-    "answer": "Quaternion"
+    "answer": "Quaternion",
+    "options": [
+      "Project",
+      "Quaternion",
+      "0",
+      "Character Controller"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 8,
     "question": "Kojeg tipa je svojstvo Scale u komponenti Transform?",
-    "answer": "Vector3"
+    "answer": "Vector3",
+    "options": [
+      "LoadScene",
+      "Rigidbody > Collision Detection",
+      "Vector3",
+      "Horizontal"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 9,
     "question": "Koja os predstavlja smjer kretanja prema naprijed?",
-    "answer": "Z os"
+    "answer": "Z os",
+    "options": [
+      "Z os",
+      "string",
+      "Animator Controller",
+      "Animator"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 10,
     "question": "Koja os predstavlja smjer kretanja prema desno?",
-    "answer": "X os"
+    "answer": "X os",
+    "options": [
+      "2D Sprite Shape",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "TextMeshPro",
+      "X os"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 11,
     "question": "Koja os predstavlja smjer kretanja prema gore?",
-    "answer": "Y os"
+    "answer": "Y os",
+    "options": [
+      "-1",
+      "interactable",
+      "Renderer",
+      "Y os"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 12,
     "question": "Koju metodu trebamo koristiti ako želimo rotirati objekt pomoću komponente Transform?",
-    "answer": "Rotate"
+    "answer": "Rotate",
+    "options": [
+      "Rotate",
+      "Sprite",
+      "`OnCollisionEnter`",
+      "sudarač s kojim smo došli u koliziju"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 13,
     "question": "Kod 2D videoigara, koju os koristimo za rotiranje objekata oko svoje osi?",
-    "answer": "Z os"
+    "answer": "Z os",
+    "options": [
+      "Y os",
+      "Vertical",
+      "Z os",
+      "`Physics.Raycast`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 14,
     "question": "Koja linija koda će zarotirati 2D objekt videoigre oko svoje osi za 30 stupnjeva?",
-    "answer": "`transform.Rotate(0f, 0f, 30f);`"
+    "answer": "`transform.Rotate(0f, 0f, 30f);`",
+    "options": [
+      "TMPro",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "-1",
+      "void"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 15,
     "question": "Koja metoda služi za pomicanje objekta pomoću komponente Transform?",
-    "answer": "Translate"
+    "answer": "Translate",
+    "options": [
+      "Translate",
+      "(0, 1)",
+      "Rect Transform",
+      "(1, 0)"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 16,
     "question": "Koja linija koda će 3D objekt podignuti prema gore za 2 prostorne jedinice?",
-    "answer": "`transform.Translate(0f, 2f, 0f);`"
+    "answer": "`transform.Translate(0f, 2f, 0f);`",
+    "options": [
+      "`Time.deltaTime`",
+      "`Vector2.Distance`",
+      "PlayerPrefs",
+      "`transform.Translate(0f, 2f, 0f);`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 17,
     "question": "Koja linija koda će 3D objekt pomaknuti za 2 prostorne jedinice u lijevo?",
-    "answer": "`transform.Translate(-2f, 0f, 0f);`"
+    "answer": "`transform.Translate(-2f, 0f, 0f);`",
+    "options": [
+      "`Input.GetMouseButtonDown(0)`",
+      "E",
+      "dvostrukih navodnih znakova",
+      "`transform.Translate(-2f, 0f, 0f);`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 18,
     "question": "Kojom metodom možemo zadati rotaciju u stupnjevima?",
-    "answer": "Quaternion.Euler"
+    "answer": "Quaternion.Euler",
+    "options": [
+      "`Physics.Raycast`",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije",
+      "On Click",
+      "Quaternion.Euler"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 19,
     "question": "Koja je vrijednost vektora Vector2.up?",
-    "answer": "(0, 1)"
+    "answer": "(0, 1)",
+    "options": [
+      "`Cursor.visible = false;`",
+      "`transform.Translate(-2f, 0f, 0f);`",
+      "1",
+      "(0, 1)"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 20,
     "question": "Koja je vrijednost vektora Vector2.right?",
-    "answer": "(1, 0)"
+    "answer": "(1, 0)",
+    "options": [
+      "Animator Controller",
+      "Audio Source",
+      "(1, 0)",
+      "Play"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 21,
     "question": "U kojem prozoru možemo vidjeti popis svih objekata na sceni?",
-    "answer": "Hierarchy"
+    "answer": "Hierarchy",
+    "options": [
+      "Audio Source",
+      "Set Native Size",
+      "Hierarchy",
+      "`pomicanje != 0`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 22,
     "question": "Putem kojeg prozora možemo mijenjati postavke trenutno odabranog objekta?",
-    "answer": "Inspector"
+    "answer": "Inspector",
+    "options": [
+      "Project",
+      "Inspector",
+      "MonoBehaviour",
+      "`Input.GetKeyDown(KeyCode.A)`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 23,
     "question": "U kojem prozoru možemo vidjeti sve resurse koji se nalaze u našem projektu?",
-    "answer": "Project"
+    "answer": "Project",
+    "options": [
+      "`OnCollisionExit2D`",
+      "`pomicanje != 0`",
+      "Z os",
+      "Project"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 24,
     "question": "U kojem prozoru možemo vidjeti grafički prikaz objekata koji se nalaze na sceni?",
-    "answer": "Scene"
+    "answer": "Scene",
+    "options": [
+      "Emission",
+      "R",
+      "Z os",
+      "Scene"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 25,
     "question": "Koja komponenta je zadužena za iscrtavanje sličica na sceni?",
-    "answer": "Sprite Renderer"
+    "answer": "Sprite Renderer",
+    "options": [
+      "Rotate",
+      "(1, 0)",
+      "Sprite Renderer",
+      "2"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 26,
     "question": "Putem dva svojstva možemo definirati veličinu iscrtavanja nekog sprajta: na razini pojedinog objekta i na razini svih sprajtova nekog tipa. Koja su to dva svojstva?",
-    "answer": "Scale i Pixel Per Unit"
+    "answer": "Scale i Pixel Per Unit",
+    "options": [
+      "TMPro",
+      "Scale i Pixel Per Unit",
+      "Order in Layer",
+      "Invoke"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 27,
     "question": "Ako je sličica veličine 512x512 piksela, koju vrijednost trebamo upisati u svojstvo Pixel Per Unit kako bi ta sličica bila veličine 2x2 prostornih jedinica na sceni?",
-    "answer": "256"
+    "answer": "256",
+    "options": [
+      "Is Trigger",
+      "256",
+      "Package Manager",
+      "float"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 28,
     "question": "Ako je sličica veličine 128x128 piksela, koju vrijednost trebamo upisati u svojstvo Pixel Per Unit kako bi ta sličica bila veličine 4x4 prostornih jedinica na sceni?",
-    "answer": "32"
+    "answer": "32",
+    "options": [
+      "Inspector",
+      "Set Native Size",
+      "int",
+      "32"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 29,
     "question": "Ako se neka sličica iscrta ispod neke druge sličice na sceni, a željeli bismo da se iscrta iznad, koje svojstvo treba promijeniti?",
-    "answer": "Order in Layer"
+    "answer": "Order in Layer",
+    "options": [
+      "void",
+      "`Input.mousePosition`",
+      "Order in Layer",
+      "Rigidbody > Collision Detection"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 30,
     "question": "Kod izrade 2D videoigara, ako želimo da se veličina objekata ne mijenja s promjenom dubine, koju vrstu prikaza moramo koristiti na objektu kamere?",
-    "answer": "Orthographic"
+    "answer": "Orthographic",
+    "options": [
+      "`transform.Translate(-2f, 0f, 0f);`",
+      "Orthographic",
+      "trigger",
+      "`transform.Translate(0f, 2f, 0f);`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 31,
     "question": "Kod ortografske projekcije kamere, koje svojstvo definira udaljenost kamere od objekata videoigre?",
-    "answer": "Size"
+    "answer": "Size",
+    "options": [
+      "Size",
+      "KeyCode",
+      "`OnCollisionEnter2D`",
+      "dvostrukih navodnih znakova"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 32,
     "question": "Koje svojstvo definira raspon udaljenosti objekata koje kamera može vidjeti?",
-    "answer": "Clipping Planes Near i Far"
+    "answer": "Clipping Planes Near i Far",
+    "options": [
+      "1",
+      "`OnCollisionStay2D`",
+      "`GetComponentInChildren`",
+      "Clipping Planes Near i Far"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 33,
     "question": "Koju klasu koristimo za upravljanje scenama?",
-    "answer": "SceneManager"
+    "answer": "SceneManager",
+    "options": [
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "SceneManager",
+      "Quaternion",
+      "Horizontal Layout Group"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 34,
     "question": "Koju metodu koristimo za ponovno učitavanje scene?",
-    "answer": "LoadScene"
+    "answer": "LoadScene",
+    "options": [
+      "-1",
+      "LoadScene",
+      "`=`",
+      "TextMeshPro"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 35,
     "question": "Kako biste kreirali 2D objekt proizvoljnog organskog oblika, potrebno je koristiti objekt tipa...",
-    "answer": "2D Sprite Shape"
+    "answer": "2D Sprite Shape",
+    "options": [
+      "IEnumerator",
+      "2D Sprite Shape",
+      "Sprite Editor",
+      "Rotate"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 36,
     "question": "Putem kojeg alata se mogu definirati granice (engl. Border) nekog sprajta?",
-    "answer": "Sprite Editor"
+    "answer": "Sprite Editor",
+    "options": [
+      "Sprite Editor",
+      "Rigidbody > Collision Detection",
+      "`GetComponentInChildren`",
+      "`OnCollisionEnter2D`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 37,
     "question": "Kako se zove paket koji nudi napredne opcije upravljanja kamerom?",
-    "answer": "Cinemachine"
+    "answer": "Cinemachine",
+    "options": [
+      "`Physics.Raycast`",
+      "Cinemachine",
+      "Invoke",
+      "NavMeshAgent"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 38,
     "question": "U kojem modulu sustava čestica se definira broj čestica koje će se emitirati?",
-    "answer": "Emission"
+    "answer": "Emission",
+    "options": [
+      "Emission",
+      "GameObject",
+      "32",
+      "Quaternion"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 39,
     "question": "U kojem modulu sustava čestica se definira oblik i veličina izvora čestica?",
-    "answer": "Shape"
+    "answer": "Shape",
+    "options": [
+      "Shape",
+      "SetBool",
+      "SceneManager",
+      "Set Native Size"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 40,
     "question": "U kojem modulu sustava čestica se definira materijal čestica?",
-    "answer": "Renderer"
+    "answer": "Renderer",
+    "options": [
+      "Canvas",
+      "Renderer",
+      "R",
+      "int"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 41,
     "question": "U kojem modulu sustava čestica se definira veličina čestica?",
-    "answer": "Glavnom modulu"
+    "answer": "Glavnom modulu",
+    "options": [
+      "Inspector",
+      "Scene",
+      "Glavnom modulu",
+      "`Rigidbody.AddTorque`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 42,
     "question": "U kojem modulu sustava čestica je moguće definirati da čestice postepeno postaju transparentne?",
-    "answer": "Color over Lifetime"
+    "answer": "Color over Lifetime",
+    "options": [
+      "2",
+      "Rigidbody",
+      "1",
+      "Color over Lifetime"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 43,
     "question": "U kojem modulu sustava čestica je moguće dodati nasumičnost u pokret čestica?",
-    "answer": "Noise"
+    "answer": "Noise",
+    "options": [
+      "`Debug.Log`",
+      "Hierarchy",
+      "Edge Collider 2D",
+      "Noise"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 44,
     "question": "Kojeg tipa treba biti varijabla ako u nju želimo pohraniti referencu na neki sustav čestica?",
-    "answer": "ParticleSystem"
+    "answer": "ParticleSystem",
+    "options": [
+      "W",
+      "Neku vrstu sudarača i Rigidbody",
+      "NavMeshAgent",
+      "ParticleSystem"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 45,
     "question": "Kojim metodama možemo započeti/zaustaviti reprodukciju čestica iz sustava čestica?",
-    "answer": "Play/Stop"
+    "answer": "Play/Stop",
+    "options": [
+      "`==`",
+      "Emission",
+      "Play/Stop",
+      "MonoBehaviour"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 46,
     "question": "Kojeg tipa treba biti varijabla u koju bismo spremili sličicu za promjenu sličice slikovnog objekta korisničkog sučelja?",
-    "answer": "Sprite"
+    "answer": "Sprite",
+    "options": [
+      "bool",
+      "void",
+      "Sprite",
+      "`Input.GetKeyDown(KeyCode.A)`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 47,
     "question": "Putem kojeg alata se sprajt na kojem se nalazi više sličica može razrezati?",
-    "answer": "Sprite Editor"
+    "answer": "Sprite Editor",
+    "options": [
+      "Animator Controller",
+      "Shape",
+      "`Physics.gravity`",
+      "Sprite Editor"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 48,
     "question": "Koji prozor služi za kreiranje animacije?",
-    "answer": "Animation"
+    "answer": "Animation",
+    "options": [
+      "int",
+      "Animation",
+      "SceneManager",
+      "Package Manager"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 49,
     "question": "Koji prozor služi za povezivanje animacija u jednu cjelinu?",
-    "answer": "Animator"
+    "answer": "Animator",
+    "options": [
+      "Animator",
+      "(0, 1)",
+      "public",
+      "`=`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 50,
     "question": "Koju komponentu moramo dodati na objekt igre koji želimo animirati?",
-    "answer": "Animator"
+    "answer": "Animator",
+    "options": [
+      "Vector3",
+      "Animator",
+      "256",
+      "`Vector2.Distance`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 51,
     "question": "Koji objekt se uređuje pomoću prozora Animator?",
-    "answer": "Animator Controller"
+    "answer": "Animator Controller",
+    "options": [
+      "Sprite",
+      "bool",
+      "2",
+      "Animator Controller"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 52,
     "question": "Ako želimo kreirati parametar pomoću kojeg ćemo u animatoru upravljati promjenom između dva stanja (npr. stajanje i hodanje), koji je najprikladniji tip tog parametra?",
-    "answer": "bool"
+    "answer": "bool",
+    "options": [
+      "`transform.Translate(-2f, 0f, 0f);`",
+      "bool",
+      "Invoke",
+      "UnityEngine.UI"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 53,
     "question": "Ako želimo kreirati parametar pomoću kojeg ćemo jednokratno aktivirati izvođenje neke animacije, koji je najprikladniji tip tog parametra?",
-    "answer": "trigger"
+    "answer": "trigger",
+    "options": [
+      "Translate",
+      "void",
+      "trigger",
+      "`OnCollisionExit2D`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 54,
     "question": "Kojom metodom možemo zadati vrijednost logičkog parametra komponente Animator?",
-    "answer": "SetBool"
+    "answer": "SetBool",
+    "options": [
+      "SetBool",
+      "`Debug.Log`",
+      "1",
+      "Input.GetKeyUp"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 55,
     "question": "Kojom metodom možemo zadati vrijednost okidača komponente Animator?",
-    "answer": "SetTrigger"
+    "answer": "SetTrigger",
+    "options": [
+      "Count",
+      "SetTrigger",
+      "Quaternion",
+      "`Time.deltaTime`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 56,
     "question": "Navedite ime ulazne osi na koju je mapiran pritisak tipki a i d.",
-    "answer": "Horizontal"
+    "answer": "Horizontal",
+    "options": [
+      "Awake",
+      "`Vector2.MoveTowards`",
+      "Horizontal",
+      "Rigidbody"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 57,
     "question": "Navedite ime ulazne osi na koju je mapiran pritisak tipki w i s.",
-    "answer": "Vertical"
+    "answer": "Vertical",
+    "options": [
+      "Vertical",
+      "int",
+      "Translate",
+      "Clipping Planes Near i Far"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 58,
     "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke A?",
-    "answer": "-1"
+    "answer": "-1",
+    "options": [
+      "256",
+      "Canvas",
+      "-1",
+      "Normalize"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 59,
     "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke D?",
-    "answer": "1"
+    "answer": "1",
+    "options": [
+      "Sloj (engl. Layer)",
+      "Input.GetKeyDown",
+      "1",
+      "Size"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 60,
     "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke W?",
-    "answer": "1"
+    "answer": "1",
+    "options": [
+      "`=`",
+      "`Random.Range`",
+      "Length",
+      "1"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 61,
     "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke S?",
-    "answer": "-1"
+    "answer": "-1",
+    "options": [
+      "E",
+      "`Physics.gravity`",
+      "`imeObjekta.GetComponent<tipKomponente>()`",
+      "-1"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 62,
     "question": "Ako držimo pritisnutu tipku A, koja će biti izlazna vrijednost ulazne osi Vertical?",
-    "answer": "0"
+    "answer": "0",
+    "options": [
+      "`GetComponentInChildren`",
+      "Renderer",
+      "0",
+      "`StartCoroutine`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 63,
     "question": "Ako držimo pritisnutu tipku S, koja će biti izlazna vrijednost ulazne osi Horizontal?",
-    "answer": "0"
+    "answer": "0",
+    "options": [
+      "`Debug.Log`",
+      "`FindObjectOfType`",
+      "0",
+      "Neku vrstu sudarača i Rigidbody"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 64,
     "question": "Koju metodu koristimo za dohvaćanje vrijednosti neke ulazne osi?",
-    "answer": "GetAxis"
+    "answer": "GetAxis",
+    "options": [
+      "On Click",
+      "GetAxis",
+      "`Instantiate`",
+      "Input.GetKey"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 65,
     "question": "Koja metoda dohvaća ulazne vrijednosti s ulaznih osi bez ikakve interpolacije ulaznih vrijednosti?",
-    "answer": "GetAxisRaw"
+    "answer": "GetAxisRaw",
+    "options": [
+      "dvostrukih navodnih znakova",
+      "GetAxisRaw",
+      "`[SerializeField]`",
+      "Animator"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 66,
     "question": "Koju klasu koristimo za dohvaćanje ulaznih vrijednosti putem tipkovnice?",
-    "answer": "Input"
+    "answer": "Input",
+    "options": [
+      "Inspector",
+      "Order in Layer",
+      "Input",
+      "Clipping Planes Near i Far"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 67,
     "question": "Koja metoda služi za detekciju pritiska neke tipke?",
-    "answer": "Input.GetKeyDown"
+    "answer": "Input.GetKeyDown",
+    "options": [
+      "Input.GetKeyDown",
+      "MonoBehaviour",
+      "`imeObjekta.GetComponent<tipKomponente>()`",
+      "TextMeshPro"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 68,
     "question": "Koja metoda služi za detekciju je li neka tipka kontinuirano pritisnuta?",
-    "answer": "Input.GetKey"
+    "answer": "Input.GetKey",
+    "options": [
+      "predložak (engl. Prefab)",
+      "Animation",
+      "Input.GetKey",
+      "`transform.LookAt`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 69,
     "question": "Koja metoda služi za detekciju je li neka tipka puštena?",
-    "answer": "Input.GetKeyUp"
+    "answer": "Input.GetKeyUp",
+    "options": [
+      "Shape",
+      "`Time.deltaTime`",
+      "Start",
+      "Input.GetKeyUp"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 70,
     "question": "Koji izraz provjerava je li pritisnuta tipka \"A\"?",
-    "answer": "`Input.GetKeyDown(KeyCode.A)`"
+    "answer": "`Input.GetKeyDown(KeyCode.A)`",
+    "options": [
+      "Input",
+      "GameObject",
+      "`Input.GetKeyDown(KeyCode.A)`",
+      "GetAxisRaw"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 71,
     "question": "Koja komponenta služi za reprodukciju zvučnih zapisa?",
-    "answer": "Audio Source"
+    "answer": "Audio Source",
+    "options": [
+      "Audio Source",
+      "Hierarchy",
+      "W",
+      "(1, 0)"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 72,
     "question": "Koje metode se koriste za reprodukciju/zaustavljanje zvučnog zapisa na izvoru zvuka?",
-    "answer": "Play/Stop"
+    "answer": "Play/Stop",
+    "options": [
+      "Play/Stop",
+      "`=`",
+      "Z os",
+      "`OnCollisionEnter2D`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 73,
     "question": "Kojom metodom možemo dohvatiti pritisak lijeve tipke miša?",
-    "answer": "`Input.GetMouseButtonDown(0)`"
+    "answer": "`Input.GetMouseButtonDown(0)`",
+    "options": [
+      "Sprite",
+      "`Input.GetMouseButtonDown(0)`",
+      "trigger",
+      "Animation"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 74,
     "question": "Koja linija koda čini kursor miša nevidljivim?",
-    "answer": "`Cursor.visible = false;`"
+    "answer": "`Cursor.visible = false;`",
+    "options": [
+      "Surface Effector 2D",
+      "`Cursor.visible = false;`",
+      "Is Trigger",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 75,
     "question": "Koje svojstvo vraća vrijednost pozicije miša?",
-    "answer": "`Input.mousePosition`"
+    "answer": "`Input.mousePosition`",
+    "options": [
+      "`Input.mousePosition`",
+      "`Vector2.MoveTowards`",
+      "Y os",
+      "NavMeshAgent"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 76,
     "question": "Koje stanje kursora miša zaključava poziciju miša na sredinu ekrana i čini miš nevidljivim?",
-    "answer": "CursorLockMode.Locked"
+    "answer": "CursorLockMode.Locked",
+    "options": [
+      "Sprite",
+      "CursorLockMode.Locked",
+      "`Rigidbody.AddTorque`",
+      "Rigidbody"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 77,
     "question": "Kojeg tipa treba biti varijabla u koju želimo pohraniti referencu na neku tipku na tipkovnici?",
-    "answer": "KeyCode"
+    "answer": "KeyCode",
+    "options": [
+      "string",
+      "KeyCode",
+      "`Camera.main.ScreenToWorldPoint`",
+      "Horizontal Layout Group"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 78,
     "question": "Kada želimo kreirati korisničko sučelje, koji objekt prvo moramo dodati na scenu?",
-    "answer": "Canvas"
+    "answer": "Canvas",
+    "options": [
+      "Color over Lifetime",
+      "`Vector2.Lerp`",
+      "public",
+      "Canvas"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 79,
     "question": "Koja komponenta definira osnovne transformacije objekata korisničkog sučelja?",
-    "answer": "Rect Transform"
+    "answer": "Rect Transform",
+    "options": [
+      "TextMeshPro",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "NavMeshAgent",
+      "Rect Transform"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 80,
     "question": "Koju opciju trebamo iskoristiti ako sliku korisničkog sučelja želimo postaviti na njezinu izvornu veličinu?",
-    "answer": "Set Native Size"
+    "answer": "Set Native Size",
+    "options": [
+      "`GetComponentInChildren`",
+      "Set Native Size",
+      "`kamion.SetActive(true);`",
+      "-1"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 81,
     "question": "Koji je paket potrebno integrirati u projekt kako bi se mogli dodavati tekstualni objekti na korisničko sučelje?",
-    "answer": "TextMeshPro"
+    "answer": "TextMeshPro",
+    "options": [
+      "TextMeshPro",
+      "256",
+      "GameObject",
+      "Canvas"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 82,
     "question": "Putem koje komponente je moguće grupirati objekte korisničkog sučelja u vertikalnu grupu?",
-    "answer": "Vertical Layout Group"
+    "answer": "Vertical Layout Group",
+    "options": [
+      "Vertical Layout Group",
+      "Count",
+      "NavMeshAgent",
+      "value"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 83,
     "question": "Putem koje komponente je moguće grupirati objekte korisničkog sučelja u horizontalnu grupu?",
-    "answer": "Horizontal Layout Group"
+    "answer": "Horizontal Layout Group",
+    "options": [
+      "Horizontal Layout Group",
+      "Z os",
+      "float",
+      "IEnumerator"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 84,
     "question": "Koju biblioteku trebamo uključiti u programsku skriptu ako želimo raditi s tekstualnim objektima korisničkog sučelja?",
-    "answer": "TMPro"
+    "answer": "TMPro",
+    "options": [
+      "Invoke",
+      "`Debug.Log`",
+      "TMPro",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 85,
     "question": "Putem kojeg događaja možemo definirati akciju koja će se izvršiti prilikom klika na gumb na korisničkom sučelju?",
-    "answer": "On Click"
+    "answer": "On Click",
+    "options": [
+      "Rect Transform",
+      "On Click",
+      "Start",
+      "Sprite Editor"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 86,
     "question": "Koje svojstvo definira možemo li vršiti interakciju s gumbom korisničkog sučelja?",
-    "answer": "interactable"
+    "answer": "interactable",
+    "options": [
+      "interactable",
+      "NavMeshAgent",
+      "`Time.deltaTime`",
+      "Horizontal"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 87,
     "question": "Koju biblioteku trebamo uključiti u programsku skriptu ako želimo referencirati klizač korisničkog sučelja?",
-    "answer": "UnityEngine.UI"
+    "answer": "UnityEngine.UI",
+    "options": [
+      "UnityEngine.UI",
+      "Sprite",
+      "`Input.GetKeyDown(KeyCode.A)`",
+      "`Physics.gravity`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 88,
     "question": "Kojom metodom možemo preračunati poziciju miša na ekranu u koordinatni sustav svijeta videoigre?",
-    "answer": "`Camera.main.ScreenToWorldPoint`"
+    "answer": "`Camera.main.ScreenToWorldPoint`",
+    "options": [
+      "`Camera.main.ScreenToWorldPoint`",
+      "SetBool",
+      "Renderer",
+      "Rect Transform"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 89,
     "question": "Putem kojeg svojstva možemo zadavati vrijednost klizaču korisničkog sučelja?",
-    "answer": "value"
+    "answer": "value",
+    "options": [
+      "Quaternion.Euler",
+      "LoadScene",
+      "value",
+      "`Vector2.Lerp`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 90,
     "question": "Putem koje funkcije možemo ispisati poruku u konzolnom prozoru?",
-    "answer": "`Debug.Log`"
+    "answer": "`Debug.Log`",
+    "options": [
+      "`Input.GetMouseButtonDown(0)`",
+      "Quaternion",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "`Debug.Log`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 91,
     "question": "Koju klasu nasljeđuju standardne programske skripte?",
-    "answer": "MonoBehaviour"
+    "answer": "MonoBehaviour",
+    "options": [
+      "FixedUpdate",
+      "ScriptableObject",
+      "MonoBehaviour",
+      "Start"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 92,
     "question": "Koja metoda se izvršava jednom na početku životnog vijeka nekog objekta?",
-    "answer": "Start"
+    "answer": "Start",
+    "options": [
+      "Length",
+      "`OnCollisionExit2D`",
+      "`OnTriggerEnter`",
+      "Start"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 93,
     "question": "Koja metoda se izvršava prilikom svakog iscrtavanja slike videoigre na ekranu?",
-    "answer": "Update"
+    "answer": "Update",
+    "options": [
+      "Update",
+      "`=`",
+      "`transform.Translate(-2f, 0f, 0f);`",
+      "`transform.Rotate(0f, 0f, 30f);`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 94,
     "question": "Koja metoda je najprikladnija za dohvaćanje referenci komponenti?",
-    "answer": "Awake"
+    "answer": "Awake",
+    "options": [
+      "`Instantiate`",
+      "Awake",
+      "Character Controller",
+      "1"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 95,
     "question": "Koji tip podatka koristimo ako u programu želimo pohraniti cjelobrojnu vrijednost?",
-    "answer": "int"
+    "answer": "int",
+    "options": [
+      "Stop",
+      "TMPro",
+      "R",
+      "int"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 96,
     "question": "Koji tip podatka koristimo ako u programu želimo pohraniti decimalnu vrijednost?",
-    "answer": "float"
+    "answer": "float",
+    "options": [
+      "UnityEngine.UI",
+      "`OnCollisionEnter`",
+      "float",
+      "Cinemachine"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 97,
     "question": "Koji tip podatka koristimo za pohranu logičke vrijednosti?",
-    "answer": "bool"
+    "answer": "bool",
+    "options": [
+      "`[SerializeField]`",
+      "bool",
+      "Audio Source",
+      "Vector3"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 98,
     "question": "Koji tip podatka koristimo za pohranu niza znakova?",
-    "answer": "string"
+    "answer": "string",
+    "options": [
+      "Input.GetKeyDown",
+      "string",
+      "Renderer",
+      "PlayerPrefs"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 99,
     "question": "Koju oznaku trebamo koristiti ako želimo da neka varijabla bude vidljiva unutar prozora Inspector?",
-    "answer": "`[SerializeField]`"
+    "answer": "`[SerializeField]`",
+    "options": [
+      "magnitude",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "`[SerializeField]`",
+      "Character Controller"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 100,
     "question": "Ako želimo detektirati koliziju između dva objekta bez fizičke kolizije, ako samo želimo izvršiti neku akciju prilikom kolizije, koje svojstvo mora biti uključeno na komponenti sudarača?",
-    "answer": "Is Trigger"
+    "answer": "Is Trigger",
+    "options": [
+      "`Vector2.MoveTowards`",
+      "MonoBehaviour",
+      "Y os",
+      "Is Trigger"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 101,
     "question": "Ako želimo kreirati varijablu u koju želimo pohraniti referencu nekog drugog objekta videoigre, kojeg tipa treba biti kreirana varijabla?",
-    "answer": "GameObject"
+    "answer": "GameObject",
+    "options": [
+      "`Physics.Raycast`",
+      "Quaternion",
+      "`yield return`",
+      "GameObject"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 102,
     "question": "Ako želimo pohraniti referencu na poziciju nekog objekta videoigre, koji tip varijable trebamo kreirati?",
-    "answer": "Transform"
+    "answer": "Transform",
+    "options": [
+      "`OnCollisionEnter`",
+      "void",
+      "TMPro",
+      "Transform"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 103,
     "question": "Kako bismo osigurali da se kamera pomiče nakon što se izvrši pomak svih objekata videoigre, u kojoj metodi trebamo implementirati pomak kamere?",
-    "answer": "LateUpdate"
+    "answer": "LateUpdate",
+    "options": [
+      "LateUpdate",
+      "Rigidbody > Collision Detection",
+      "`kamion.SetActive(true);`",
+      "Selekciju (npr. `if`)"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 104,
     "question": "Koje svojstvo trebamo koristiti kako bismo klasificirali objekte videoigre u različite kategorije?",
-    "answer": "Oznaku (engl. Tag)"
+    "answer": "Oznaku (engl. Tag)",
+    "options": [
+      "LateUpdate",
+      "Hierarchy",
+      "Animator Controller",
+      "Oznaku (engl. Tag)"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 105,
     "question": "Ako želimo implementirati neko odlučivanje ili izvršavanje programskog koda na temelju nekog logičkog uvjeta, koji konstrukt trebamo koristiti?",
-    "answer": "Selekciju (npr. `if`)"
+    "answer": "Selekciju (npr. `if`)",
+    "options": [
+      "For",
+      "Selekciju (npr. `if`)",
+      "(0, 1)",
+      "`Rigidbody.AddTorque`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 106,
     "question": "Ako želimo neke linije programskog koda izvršiti više puta, tada trebamo koristiti...",
-    "answer": "Iteracije (npr. `for`)"
+    "answer": "Iteracije (npr. `for`)",
+    "options": [
+      "`Input.mousePosition`",
+      "trigger",
+      "Iteracije (npr. `for`)",
+      "Sprite Editor"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 107,
     "question": "Koji operator koristimo kod izrade logičkih uvjeta kako bismo usporedili jesu li dva operanda jednaka?",
-    "answer": "`==`"
+    "answer": "`==`",
+    "options": [
+      "`kamion.SetActive(true);`",
+      "Sprite Editor",
+      "`==`",
+      "(1, 0)"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 108,
     "question": "Kako bismo u znakovnu varijablu upisali neki tekst, moramo ga napisati unutar...",
-    "answer": "dvostrukih navodnih znakova"
+    "answer": "dvostrukih navodnih znakova",
+    "options": [
+      "Quaternion",
+      "GameObject",
+      "`List<tip> nazivListe = new List<tip>();`",
+      "dvostrukih navodnih znakova"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 109,
     "question": "Koji izraz će varijabli brzina dodijeliti vrijednost 5?",
-    "answer": "`=`"
+    "answer": "`=`",
+    "options": [
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "Quaternion",
+      "PlayerPrefs",
+      "`=`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 110,
     "question": "Što moramo napisati kako bismo dobili referencu na objekt videoigre na kojem se nalazi skripta unutar koje se nalazi ovaj programski kod?",
-    "answer": "`gameObject`"
+    "answer": "`gameObject`",
+    "options": [
+      "`gameObject`",
+      "`GetComponentInChildren`",
+      "predložak (engl. Prefab)",
+      "string"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 111,
     "question": "Koji izraz će deaktivirati objekt koji se nalazi pohranjen u varijabli \"automobil\"?",
-    "answer": "`automobil.SetActive(false);`"
+    "answer": "`automobil.SetActive(false);`",
+    "options": [
+      "Glavnom modulu",
+      "`StartCoroutine`",
+      "TextMeshPro",
+      "`automobil.SetActive(false);`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 112,
     "question": "Koji izraz će aktivirati objekt koji se nalazi pohranjen u varijabli \"kamion\"?",
-    "answer": "`kamion.SetActive(true);`"
+    "answer": "`kamion.SetActive(true);`",
+    "options": [
+      "`OnCollisionStay2D`",
+      "NavMeshAgent",
+      "`kamion.SetActive(true);`",
+      "Rigidbody"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 113,
     "question": "Koji izraz koristimo kako bismo dohvatili referencu na neku komponentu koja se nalazi na nekom objektu videoigre?",
-    "answer": "`imeObjekta.GetComponent<tipKomponente>()`"
+    "answer": "`imeObjekta.GetComponent<tipKomponente>()`",
+    "options": [
+      "`imeObjekta.GetComponent<tipKomponente>()`",
+      "FixedUpdate",
+      "Rect Transform",
+      "CursorLockMode.Locked"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 114,
     "question": "Kako bismo mogli pozvati neku funkciju izvan same skripte gdje je ta funkcija definirana, funkcija mora imati oznaku...",
-    "answer": "public"
+    "answer": "public",
+    "options": [
+      "public",
+      "`Input.GetKeyDown(KeyCode.A)`",
+      "Horizontal Layout Group",
+      "On Click"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 115,
     "question": "Kada kreiramo svoju funkciju koja nema nikakvu povratnu vrijednost, tada tip funkcije treba biti...",
-    "answer": "void"
+    "answer": "void",
+    "options": [
+      "void",
+      "`Vector2.Distance`",
+      "Edge Collider 2D",
+      "`OnCollisionEnter`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 116,
     "question": "Kada kreiramo funkciju koja ima cjelobrojnu povratnu vrijednost, tip funkcije treba biti...",
-    "answer": "int"
+    "answer": "int",
+    "options": [
+      "int",
+      "Rigidbody",
+      "Start",
+      "`Time.deltaTime`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 117,
     "question": "Koliko cjelobrojnih ulaznih parametara ima sljedeća funkcija:\\\n&#x20;`void MojaFunkcija(int a, float b, int c)`?",
-    "answer": "2"
+    "answer": "2",
+    "options": [
+      "LoadScene",
+      "Animation",
+      "2",
+      "`Vector2.Distance`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 118,
     "question": "Kako bismo provjerili je li vrijednost varijable \"pomicanje\" različita od nule, trebamo koristiti sljedeći izraz:",
-    "answer": "`pomicanje != 0`"
+    "answer": "`pomicanje != 0`",
+    "options": [
+      "2D Sprite Shape",
+      "Project",
+      "`Mathf.Clamp`",
+      "`pomicanje != 0`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 119,
     "question": "Putem kojeg prozora možete dodati nove pakete u svoj projekt?",
-    "answer": "Package Manager"
+    "answer": "Package Manager",
+    "options": [
+      "Package Manager",
+      "Putem indeksa",
+      "E",
+      "`Vector2.Lerp`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 120,
     "question": "Kojom metodom je moguće pronaći na sceni objekt određenog tipa?",
-    "answer": "`FindObjectOfType`"
+    "answer": "`FindObjectOfType`",
+    "options": [
+      "`FindObjectOfType`",
+      "Set Native Size",
+      "Size",
+      "`Input.GetKeyDown(KeyCode.A)`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 121,
     "question": "Kako se naziva spremnik podataka u koji možemo pohraniti proizvoljnu količinu podataka?",
-    "answer": "ScriptableObject"
+    "answer": "ScriptableObject",
+    "options": [
+      "`Vector2.Lerp`",
+      "ScriptableObject",
+      "`Physics.Raycast`",
+      "`transform.Translate(0f, 2f, 0f);`"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 122,
     "question": "Što je ispravna sintaksa za kreiranje polja cjelobrojnih vrijednosti?",
-    "answer": "`int[] polje;`"
+    "answer": "`int[] polje;`",
+    "options": [
+      "PlayerPrefs",
+      "trigger",
+      "`OnCollisionStay`",
+      "`int[] polje;`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 123,
     "question": "Na koji način pristupamo željenom podatku unutar polja?",
-    "answer": "Putem indeksa"
+    "answer": "Putem indeksa",
+    "options": [
+      "`Input.GetKeyDown(KeyCode.A)`",
+      "`transform.Translate(0f, 2f, 0f);`",
+      "float",
+      "Putem indeksa"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 124,
     "question": "Koje svojstvo polja vraća vrijednost koliko ima elemenata u polju?",
-    "answer": "Length"
+    "answer": "Length",
+    "options": [
+      "Length",
+      "`Application.Quit();`",
+      "`OnCollisionStay2D`",
+      "Orthographic"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 125,
     "question": "Koja petlja je prikladna za čitanje svih elemenata iz polja?",
-    "answer": "For"
+    "answer": "For",
+    "options": [
+      "Hierarchy",
+      "value",
+      "predložak (engl. Prefab)",
+      "For"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 126,
     "question": "Pomoću koje funkcije možemo dohvatiti referencu na neku komponentu u podređenom objektu?",
-    "answer": "`GetComponentInChildren`"
+    "answer": "`GetComponentInChildren`",
+    "options": [
+      "Y os",
+      "`GetComponentInChildren`",
+      "For",
+      "Oznaku (engl. Tag)"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 127,
     "question": "Što je ispravna sintaksa za deklaraciju i inicijalizaciju liste?",
-    "answer": "`List<tip> nazivListe = new List<tip>();`"
+    "answer": "`List<tip> nazivListe = new List<tip>();`",
+    "options": [
+      "Vertical",
+      "sudarač s kojim smo došli u koliziju",
+      "`List<tip> nazivListe = new List<tip>();`",
+      "`yield return`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 128,
     "question": "Koje svojstvo vraća vrijednost koliko ima elemenata u listi?",
-    "answer": "Count"
+    "answer": "Count",
+    "options": [
+      "Hierarchy",
+      "Horizontal",
+      "Count",
+      "Size"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 129,
     "question": "Koju metodu koristimo za generiranje pseudoslučajnih brojeva u nekom rasponu?",
-    "answer": "`Random.Range`"
+    "answer": "`Random.Range`",
+    "options": [
+      "Play",
+      "`Physics.gravity`",
+      "PlayerPrefs",
+      "`Random.Range`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 130,
     "question": "Ako želimo dinamički instancirati neki objekt videoigre moramo napraviti...",
-    "answer": "predložak (engl. Prefab)"
+    "answer": "predložak (engl. Prefab)",
+    "options": [
+      "Neku vrstu sudarača",
+      "predložak (engl. Prefab)",
+      "Clipping Planes Near i Far",
+      "Quaternion.Euler"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 131,
     "question": "Kojom metodom možemo dinamički stvoriti novi objekt videoigre tijekom izvođenja videoigre?",
-    "answer": "`Instantiate`"
+    "answer": "`Instantiate`",
+    "options": [
+      "`[SerializeField]`",
+      "Emission",
+      "Clipping Planes Near i Far",
+      "`Instantiate`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 132,
     "question": "Koja linija koda omogućava izlazak iz videoigre?",
-    "answer": "`Application.Quit();`"
+    "answer": "`Application.Quit();`",
+    "options": [
+      "`Application.Quit();`",
+      "PlayerPrefs",
+      "`kamion.SetActive(true);`",
+      "Shape"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 133,
     "question": "Koju klasu trebamo koristiti ako želimo pohraniti neki podatak u registar računala, podatak koji će ostati pohranjen i nakon što zaustavimo izvođenje videoigre?",
-    "answer": "PlayerPrefs"
+    "answer": "PlayerPrefs",
+    "options": [
+      "Rotate",
+      "Animation",
+      "PlayerPrefs",
+      "`pomicanje != 0`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 134,
     "question": "Kako bi se adekvatno detektirala kolizija između neka dva objekta videoigre, koje komponente treba imati statični nepomični objekt?",
-    "answer": "Neku vrstu sudarača"
+    "answer": "Neku vrstu sudarača",
+    "options": [
+      "Animator",
+      "Clipping Planes Near i Far",
+      "`Input.mousePosition`",
+      "Neku vrstu sudarača"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 135,
     "question": "Što moramo uključiti u jednadžbu kako bismo osigurali jednaku brzinu izvođenja videoigre na svim uređajima?",
-    "answer": "`Time.deltaTime`"
+    "answer": "`Time.deltaTime`",
+    "options": [
+      "`Time.deltaTime`",
+      "Play",
+      "Vertical",
+      "Project"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 136,
     "question": "Kako bi se adekvatno detektirala kolizija između neka dva objekta videoigre, koje komponente mora imati tijelo koje se pomiče?",
-    "answer": "Neku vrstu sudarača i Rigidbody"
+    "answer": "Neku vrstu sudarača i Rigidbody",
+    "options": [
+      "Neku vrstu sudarača i Rigidbody",
+      "Surface Effector 2D",
+      "`OnCollisionExit2D`",
+      "Noise"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 137,
     "question": "Koja komponenta služi za simulaciju fizike krutih tijela?",
-    "answer": "Rigidbody"
+    "answer": "Rigidbody",
+    "options": [
+      "TMPro",
+      "`Time.deltaTime`",
+      "`Input.GetMouseButtonDown(0)`",
+      "Rigidbody"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 138,
     "question": "Ako želimo vršiti fizičku detekciju kolizije između različitih objekata, koje svojstvo mora biti isključeno na komponenti sudarača?",
-    "answer": "Is Trigger"
+    "answer": "Is Trigger",
+    "options": [
+      "Package Manager",
+      "`transform.Rotate(0f, 0f, 30f);`",
+      "Is Trigger",
+      "LateUpdate"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 139,
     "question": "Koja metoda se automatski poziva prilikom fizičke kolizije s nekim drugim objektom videoigre?",
-    "answer": "`OnCollisionEnter` / `OnCollisionEnter2D`"
+    "answer": "`OnCollisionEnter` / `OnCollisionEnter2D`",
+    "options": [
+      "`Physics.gravity`",
+      "Canvas",
+      "`OnCollisionEnter` / `OnCollisionEnter2D`",
+      "`[SerializeField]`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 140,
     "question": "Koja metoda se automatski poziva prilikom kolizije dva objekta kod koje ne vršimo fizičku detekciju kolizije već samo izvršavamo neku akciju?",
-    "answer": "`OnTriggerEnter` / `OnTriggerEnter2D`"
+    "answer": "`OnTriggerEnter` / `OnTriggerEnter2D`",
+    "options": [
+      "`Time.time`",
+      "`Debug.Log`",
+      "`OnTriggerEnter` / `OnTriggerEnter2D`",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 141,
     "question": "Koja metoda se izvršava tijekom fizičke kolizije između dva objekta?",
-    "answer": "`OnCollisionStay` / `OnCollisionStay2D`"
+    "answer": "`OnCollisionStay` / `OnCollisionStay2D`",
+    "options": [
+      "Clipping Planes Near i Far",
+      "Package Manager",
+      "`OnCollisionStay` / `OnCollisionStay2D`",
+      "Quaternion"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 142,
     "question": "Koja metoda se izvršava u trenutku prestanka fizičke kolizije između dva objekta?",
-    "answer": "`OnCollisionExit` / `OnCollisionExit2D`"
+    "answer": "`OnCollisionExit` / `OnCollisionExit2D`",
+    "options": [
+      "Length",
+      "`OnCollisionExit` / `OnCollisionExit2D`",
+      "`=`",
+      "Input.GetKey"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 143,
     "question": "Ako želimo obrisati neki objekt videoigre, koju metodu trebamo koristiti?",
-    "answer": "`Destroy`"
+    "answer": "`Destroy`",
+    "options": [
+      "Quaternion",
+      "`Destroy`",
+      "Play",
+      "1"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 144,
     "question": "Metoda OnTriggerEnter2D ima jedan ulazni parametar. To je referenca na...",
-    "answer": "sudarač s kojim smo došli u koliziju"
+    "answer": "sudarač s kojim smo došli u koliziju",
+    "options": [
+      "`Instantiate`",
+      "IEnumerator",
+      "sudarač s kojim smo došli u koliziju",
+      "Clipping Planes Near i Far"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 145,
     "question": "Koja vrsta sudarača se koristi kod objekta tipa Sprite Shape?",
-    "answer": "Edge Collider 2D"
+    "answer": "Edge Collider 2D",
+    "options": [
+      "Edge Collider 2D",
+      "Scale i Pixel Per Unit",
+      "TMPro",
+      "Update"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 146,
     "question": "Koju metodu treba koristiti za implementaciju programske logike koja je vezana za simulaciju fizike?",
-    "answer": "FixedUpdate"
+    "answer": "FixedUpdate",
+    "options": [
+      "FixedUpdate",
+      "`imeObjekta.GetComponent<tipKomponente>()`",
+      "Rotate",
+      "Transform"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 147,
     "question": "Koja metoda se koristi za poziv neke druge metode unutar programske skripte s određenim vremenskim odmakom?",
-    "answer": "Invoke"
+    "answer": "Invoke",
+    "options": [
+      "Animation",
+      "On Click",
+      "Invoke",
+      "Rect Transform"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 148,
     "question": "Što su parametri funkcije Invoke?",
-    "answer": "Naziv funkcije i vrijeme odmaka poziva funkcije"
+    "answer": "Naziv funkcije i vrijeme odmaka poziva funkcije",
+    "options": [
+      "`imeObjekta.GetComponent<tipKomponente>()`",
+      "Update",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije",
+      "`==`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 149,
     "question": "Koje svojstvo nam vraća trenutno vrijeme izvođenja videoigre?",
-    "answer": "`Time.time`"
+    "answer": "`Time.time`",
+    "options": [
+      "Audio Source",
+      "Size",
+      "Vertical Layout Group",
+      "`Time.time`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 150,
     "question": "Koju funkciju trebamo koristiti ako želimo dužinu vektora postaviti na jediničnu vrijednost (vrijednost 1)?",
-    "answer": "Normalize"
+    "answer": "Normalize",
+    "options": [
+      "`OnTriggerEnter2D`",
+      "Horizontal",
+      "`Physics.Raycast`",
+      "Normalize"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 151,
     "question": "Pomoću koje metode možemo računati udaljenost između dva dvodimenzionalna vektora?",
-    "answer": "`Vector2.Distance`"
+    "answer": "`Vector2.Distance`",
+    "options": [
+      "`Vector2.Distance`",
+      "Naziv funkcije i vrijeme odmaka poziva funkcije",
+      "`Time.time`",
+      "`OnTriggerEnter`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 152,
     "question": "Pomoću koje metode možemo neki dvodimenzionalni objekt videoigre pomicati prema drugom objektu određenom brzinom?",
-    "answer": "`Vector2.MoveTowards`"
+    "answer": "`Vector2.MoveTowards`",
+    "options": [
+      "`Vector2.MoveTowards`",
+      "SetBool",
+      "Edge Collider 2D",
+      "Noise"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 153,
     "question": "Ako želimo definirati sudarač za sprajt nekog nestandardnog oblika, koju vrstu sudarača trebamo koristiti?",
-    "answer": "Polygon Collider 2D"
+    "answer": "Polygon Collider 2D",
+    "options": [
+      "Polygon Collider 2D",
+      "(1, 0)",
+      "FixedUpdate",
+      "`=`"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 154,
     "question": "Kako bismo onemogućili detekciju kolizije između dvije vrste objekata, koje svojstvo trebamo prilagoditi?",
-    "answer": "Sloj (engl. Layer)"
+    "answer": "Sloj (engl. Layer)",
+    "options": [
+      "`Instantiate`",
+      "TextMeshPro",
+      "Sloj (engl. Layer)",
+      "`FindObjectOfType`"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 155,
     "question": "Metoda Destroy ima jedan opcionalni parametar. Taj parametar predstavlja...",
-    "answer": "vrijeme odgode izvršavanja uništavanja"
+    "answer": "vrijeme odgode izvršavanja uništavanja",
+    "options": [
+      "Vertical",
+      "vrijeme odgode izvršavanja uništavanja",
+      "Color over Lifetime",
+      "-1"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 156,
     "question": "Koja funkcija radi linearnu interpolaciju između dva dvodimenzionalna vektora?",
-    "answer": "`Vector2.Lerp`"
+    "answer": "`Vector2.Lerp`",
+    "options": [
+      "Audio Source",
+      "0",
+      "`[SerializeField]`",
+      "`Vector2.Lerp`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 157,
     "question": "Koje svojstvo treba prilagoditi kada dođe do krivog izračuna detekcije kolizije uslijed velike brzine objekta?",
-    "answer": "Rigidbody > Collision Detection"
+    "answer": "Rigidbody > Collision Detection",
+    "options": [
+      "Rigidbody > Collision Detection",
+      "Set Native Size",
+      "`Physics.Raycast`",
+      "32"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 158,
     "question": "Kako bismo simulirali pomicanje pokretne trake, potrebno je koristiti komponentu...",
-    "answer": "Surface Effector 2D"
+    "answer": "Surface Effector 2D",
+    "options": [
+      "Surface Effector 2D",
+      "`OnCollisionStay`",
+      "2",
+      "Input.GetKeyUp"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 159,
     "question": "Koja metoda služi za dodavanje okretnog momenta objektu?",
-    "answer": "`Rigidbody.AddTorque`"
+    "answer": "`Rigidbody.AddTorque`",
+    "options": [
+      "`Rigidbody.AddTorque`",
+      "On Click",
+      "value",
+      "string"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 160,
     "question": "Pomoću koje funkcije možemo ograničiti vrijednost neke varijable određenom minimalnom i maksimalnom vrijednošću?",
-    "answer": "`Mathf.Clamp`"
+    "answer": "`Mathf.Clamp`",
+    "options": [
+      "CursorLockMode.Locked",
+      "`Mathf.Clamp`",
+      "GetAxisRaw",
+      "Quaternion.Euler"
+    ],
+    "correct_index": 1,
+    "unavailable": false
   },
   {
+    "id": 161,
     "question": "Kojeg tipa treba kreirati funkciju koja će biti korutina?",
-    "answer": "IEnumerator"
+    "answer": "IEnumerator",
+    "options": [
+      "IEnumerator",
+      "Noise",
+      "Sprite",
+      "Input"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 162,
     "question": "Kojom naredbom možemo zaustaviti izvođenje korutine kako bi se njezino izvođenje nastavilo kod idućeg iscrtavanja sličice na ekran?",
-    "answer": "`yield return`"
+    "answer": "`yield return`",
+    "options": [
+      "`yield return`",
+      "predložak (engl. Prefab)",
+      "`Vector2.MoveTowards`",
+      "TextMeshPro"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 163,
     "question": "Kojom metodom možemo započeti izvođenje neke korutine?",
-    "answer": "`StartCoroutine`"
+    "answer": "`StartCoroutine`",
+    "options": [
+      "`StartCoroutine`",
+      "`Destroy`",
+      "FixedUpdate",
+      "SetBool"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 164,
     "question": "Kako se naziva komponenta koja omogućava kretanje objekta u 3D prostoru te ima u sebi ugrađen sudarač?",
-    "answer": "Character Controller"
+    "answer": "Character Controller",
+    "options": [
+      "ParticleSystem",
+      "Renderer",
+      "Character Controller",
+      "X os"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 165,
     "question": "Koje svojstvo vraća dužinu vektora?",
-    "answer": "magnitude"
+    "answer": "magnitude",
+    "options": [
+      "GetAxisRaw",
+      "vrijeme odgode izvršavanja uništavanja",
+      "Translate",
+      "magnitude"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 166,
     "question": "Kako možemo pročitati vrijednost definirane gravitacije u projektu?",
-    "answer": "`Physics.gravity`"
+    "answer": "`Physics.gravity`",
+    "options": [
+      "`==`",
+      "PlayerPrefs",
+      "X os",
+      "`Physics.gravity`"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   },
   {
+    "id": 167,
     "question": "Pomoću koje metode možemo ispucati zraku u nekom smjeru i identificirati mjesto kolizije s nekim objektom videoigre?",
-    "answer": "`Physics.Raycast`"
+    "answer": "`Physics.Raycast`",
+    "options": [
+      "Selekciju (npr. `if`)",
+      "Shape",
+      "`Physics.Raycast`",
+      "LateUpdate"
+    ],
+    "correct_index": 2,
+    "unavailable": false
   },
   {
+    "id": 168,
     "question": "Pomoću koje metode možemo u 3D prostoru neki objekt videoigre zarotirati prema nekom drugom objektu videoigre?",
-    "answer": "`transform.LookAt`"
+    "answer": "`transform.LookAt`",
+    "options": [
+      "`transform.LookAt`",
+      "NavMeshAgent",
+      "`GetComponentInChildren`",
+      "For"
+    ],
+    "correct_index": 0,
+    "unavailable": false
   },
   {
+    "id": 169,
     "question": "Koju biblioteku moramo uključiti u programsku skriptu ako želimo raditi s objektima navigacijskog područja i navigacijskim agentima?",
-    "answer": "[suspicious link removed]"
+    "answer": "[suspicious link removed]",
+    "options": [],
+    "unavailable": true
   },
   {
+    "id": 170,
     "question": "Ako želimo pohraniti referencu na objekt koji je navigacijski agent, kojeg tipa treba biti ta varijabla?",
-    "answer": "NavMeshAgent"
+    "answer": "NavMeshAgent",
+    "options": [
+      "value",
+      "Rect Transform",
+      "`Application.Quit();`",
+      "NavMeshAgent"
+    ],
+    "correct_index": 3,
+    "unavailable": false
   }
 ]
