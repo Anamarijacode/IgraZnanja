@@ -1,0 +1,682 @@
+[
+  {
+    "question": "Koja kratica se koristi za aktiviranje alata za pomicanje objekata unutar prozora scene?",
+    "answer": "W"
+  },
+  {
+    "question": "Koja kratica se koristi za aktiviranje alata za rotiranje objekata unutar pogleda scene?",
+    "answer": "E"
+  },
+  {
+    "question": "Koja kratica se koristi za aktiviranje alata za skaliranje objekta unutar prozora scene?",
+    "answer": "R"
+  },
+  {
+    "question": "Putem koje komponente se definira pozicija objekta u prostoru?",
+    "answer": "Transform"
+  },
+  {
+    "question": "Putem koje komponente se definira rotacija objekta u prostoru?",
+    "answer": "Transform"
+  },
+  {
+    "question": "Kojeg tipa je svojstvo Position u komponenti Transform?",
+    "answer": "Vector3"
+  },
+  {
+    "question": "Kojeg tipa je svojstvo Rotation u komponenti Transform?",
+    "answer": "Quaternion"
+  },
+  {
+    "question": "Kojeg tipa je svojstvo Scale u komponenti Transform?",
+    "answer": "Vector3"
+  },
+  {
+    "question": "Koja os predstavlja smjer kretanja prema naprijed?",
+    "answer": "Z os"
+  },
+  {
+    "question": "Koja os predstavlja smjer kretanja prema desno?",
+    "answer": "X os"
+  },
+  {
+    "question": "Koja os predstavlja smjer kretanja prema gore?",
+    "answer": "Y os"
+  },
+  {
+    "question": "Koju metodu trebamo koristiti ako želimo rotirati objekt pomoću komponente Transform?",
+    "answer": "Rotate"
+  },
+  {
+    "question": "Kod 2D videoigara, koju os koristimo za rotiranje objekata oko svoje osi?",
+    "answer": "Z os"
+  },
+  {
+    "question": "Koja linija koda će zarotirati 2D objekt videoigre oko svoje osi za 30 stupnjeva?",
+    "answer": "`transform.Rotate(0f, 0f, 30f);`"
+  },
+  {
+    "question": "Koja metoda služi za pomicanje objekta pomoću komponente Transform?",
+    "answer": "Translate"
+  },
+  {
+    "question": "Koja linija koda će 3D objekt podignuti prema gore za 2 prostorne jedinice?",
+    "answer": "`transform.Translate(0f, 2f, 0f);`"
+  },
+  {
+    "question": "Koja linija koda će 3D objekt pomaknuti za 2 prostorne jedinice u lijevo?",
+    "answer": "`transform.Translate(-2f, 0f, 0f);`"
+  },
+  {
+    "question": "Kojom metodom možemo zadati rotaciju u stupnjevima?",
+    "answer": "Quaternion.Euler"
+  },
+  {
+    "question": "Koja je vrijednost vektora Vector2.up?",
+    "answer": "(0, 1)"
+  },
+  {
+    "question": "Koja je vrijednost vektora Vector2.right?",
+    "answer": "(1, 0)"
+  },
+  {
+    "question": "U kojem prozoru možemo vidjeti popis svih objekata na sceni?",
+    "answer": "Hierarchy"
+  },
+  {
+    "question": "Putem kojeg prozora možemo mijenjati postavke trenutno odabranog objekta?",
+    "answer": "Inspector"
+  },
+  {
+    "question": "U kojem prozoru možemo vidjeti sve resurse koji se nalaze u našem projektu?",
+    "answer": "Project"
+  },
+  {
+    "question": "U kojem prozoru možemo vidjeti grafički prikaz objekata koji se nalaze na sceni?",
+    "answer": "Scene"
+  },
+  {
+    "question": "Koja komponenta je zadužena za iscrtavanje sličica na sceni?",
+    "answer": "Sprite Renderer"
+  },
+  {
+    "question": "Putem dva svojstva možemo definirati veličinu iscrtavanja nekog sprajta: na razini pojedinog objekta i na razini svih sprajtova nekog tipa. Koja su to dva svojstva?",
+    "answer": "Scale i Pixel Per Unit"
+  },
+  {
+    "question": "Ako je sličica veličine 512x512 piksela, koju vrijednost trebamo upisati u svojstvo Pixel Per Unit kako bi ta sličica bila veličine 2x2 prostornih jedinica na sceni?",
+    "answer": "256"
+  },
+  {
+    "question": "Ako je sličica veličine 128x128 piksela, koju vrijednost trebamo upisati u svojstvo Pixel Per Unit kako bi ta sličica bila veličine 4x4 prostornih jedinica na sceni?",
+    "answer": "32"
+  },
+  {
+    "question": "Ako se neka sličica iscrta ispod neke druge sličice na sceni, a željeli bismo da se iscrta iznad, koje svojstvo treba promijeniti?",
+    "answer": "Order in Layer"
+  },
+  {
+    "question": "Kod izrade 2D videoigara, ako želimo da se veličina objekata ne mijenja s promjenom dubine, koju vrstu prikaza moramo koristiti na objektu kamere?",
+    "answer": "Orthographic"
+  },
+  {
+    "question": "Kod ortografske projekcije kamere, koje svojstvo definira udaljenost kamere od objekata videoigre?",
+    "answer": "Size"
+  },
+  {
+    "question": "Koje svojstvo definira raspon udaljenosti objekata koje kamera može vidjeti?",
+    "answer": "Clipping Planes Near i Far"
+  },
+  {
+    "question": "Koju klasu koristimo za upravljanje scenama?",
+    "answer": "SceneManager"
+  },
+  {
+    "question": "Koju metodu koristimo za ponovno učitavanje scene?",
+    "answer": "LoadScene"
+  },
+  {
+    "question": "Kako biste kreirali 2D objekt proizvoljnog organskog oblika, potrebno je koristiti objekt tipa...",
+    "answer": "2D Sprite Shape"
+  },
+  {
+    "question": "Putem kojeg alata se mogu definirati granice (engl. Border) nekog sprajta?",
+    "answer": "Sprite Editor"
+  },
+  {
+    "question": "Kako se zove paket koji nudi napredne opcije upravljanja kamerom?",
+    "answer": "Cinemachine"
+  },
+  {
+    "question": "U kojem modulu sustava čestica se definira broj čestica koje će se emitirati?",
+    "answer": "Emission"
+  },
+  {
+    "question": "U kojem modulu sustava čestica se definira oblik i veličina izvora čestica?",
+    "answer": "Shape"
+  },
+  {
+    "question": "U kojem modulu sustava čestica se definira materijal čestica?",
+    "answer": "Renderer"
+  },
+  {
+    "question": "U kojem modulu sustava čestica se definira veličina čestica?",
+    "answer": "Glavnom modulu"
+  },
+  {
+    "question": "U kojem modulu sustava čestica je moguće definirati da čestice postepeno postaju transparentne?",
+    "answer": "Color over Lifetime"
+  },
+  {
+    "question": "U kojem modulu sustava čestica je moguće dodati nasumičnost u pokret čestica?",
+    "answer": "Noise"
+  },
+  {
+    "question": "Kojeg tipa treba biti varijabla ako u nju želimo pohraniti referencu na neki sustav čestica?",
+    "answer": "ParticleSystem"
+  },
+  {
+    "question": "Kojim metodama možemo započeti/zaustaviti reprodukciju čestica iz sustava čestica?",
+    "answer": "Play/Stop"
+  },
+  {
+    "question": "Kojeg tipa treba biti varijabla u koju bismo spremili sličicu za promjenu sličice slikovnog objekta korisničkog sučelja?",
+    "answer": "Sprite"
+  },
+  {
+    "question": "Putem kojeg alata se sprajt na kojem se nalazi više sličica može razrezati?",
+    "answer": "Sprite Editor"
+  },
+  {
+    "question": "Koji prozor služi za kreiranje animacije?",
+    "answer": "Animation"
+  },
+  {
+    "question": "Koji prozor služi za povezivanje animacija u jednu cjelinu?",
+    "answer": "Animator"
+  },
+  {
+    "question": "Koju komponentu moramo dodati na objekt igre koji želimo animirati?",
+    "answer": "Animator"
+  },
+  {
+    "question": "Koji objekt se uređuje pomoću prozora Animator?",
+    "answer": "Animator Controller"
+  },
+  {
+    "question": "Ako želimo kreirati parametar pomoću kojeg ćemo u animatoru upravljati promjenom između dva stanja (npr. stajanje i hodanje), koji je najprikladniji tip tog parametra?",
+    "answer": "bool"
+  },
+  {
+    "question": "Ako želimo kreirati parametar pomoću kojeg ćemo jednokratno aktivirati izvođenje neke animacije, koji je najprikladniji tip tog parametra?",
+    "answer": "trigger"
+  },
+  {
+    "question": "Kojom metodom možemo zadati vrijednost logičkog parametra komponente Animator?",
+    "answer": "SetBool"
+  },
+  {
+    "question": "Kojom metodom možemo zadati vrijednost okidača komponente Animator?",
+    "answer": "SetTrigger"
+  },
+  {
+    "question": "Navedite ime ulazne osi na koju je mapiran pritisak tipki a i d.",
+    "answer": "Horizontal"
+  },
+  {
+    "question": "Navedite ime ulazne osi na koju je mapiran pritisak tipki w i s.",
+    "answer": "Vertical"
+  },
+  {
+    "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke A?",
+    "answer": "-1"
+  },
+  {
+    "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke D?",
+    "answer": "1"
+  },
+  {
+    "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke W?",
+    "answer": "1"
+  },
+  {
+    "question": "Kod inicijalnog mapiranja ulaznih osi, koju vrijednost će vratiti pritisak tipke S?",
+    "answer": "-1"
+  },
+  {
+    "question": "Ako držimo pritisnutu tipku A, koja će biti izlazna vrijednost ulazne osi Vertical?",
+    "answer": "0"
+  },
+  {
+    "question": "Ako držimo pritisnutu tipku S, koja će biti izlazna vrijednost ulazne osi Horizontal?",
+    "answer": "0"
+  },
+  {
+    "question": "Koju metodu koristimo za dohvaćanje vrijednosti neke ulazne osi?",
+    "answer": "GetAxis"
+  },
+  {
+    "question": "Koja metoda dohvaća ulazne vrijednosti s ulaznih osi bez ikakve interpolacije ulaznih vrijednosti?",
+    "answer": "GetAxisRaw"
+  },
+  {
+    "question": "Koju klasu koristimo za dohvaćanje ulaznih vrijednosti putem tipkovnice?",
+    "answer": "Input"
+  },
+  {
+    "question": "Koja metoda služi za detekciju pritiska neke tipke?",
+    "answer": "Input.GetKeyDown"
+  },
+  {
+    "question": "Koja metoda služi za detekciju je li neka tipka kontinuirano pritisnuta?",
+    "answer": "Input.GetKey"
+  },
+  {
+    "question": "Koja metoda služi za detekciju je li neka tipka puštena?",
+    "answer": "Input.GetKeyUp"
+  },
+  {
+    "question": "Koji izraz provjerava je li pritisnuta tipka \"A\"?",
+    "answer": "`Input.GetKeyDown(KeyCode.A)`"
+  },
+  {
+    "question": "Koja komponenta služi za reprodukciju zvučnih zapisa?",
+    "answer": "Audio Source"
+  },
+  {
+    "question": "Koje metode se koriste za reprodukciju/zaustavljanje zvučnog zapisa na izvoru zvuka?",
+    "answer": "Play/Stop"
+  },
+  {
+    "question": "Kojom metodom možemo dohvatiti pritisak lijeve tipke miša?",
+    "answer": "`Input.GetMouseButtonDown(0)`"
+  },
+  {
+    "question": "Koja linija koda čini kursor miša nevidljivim?",
+    "answer": "`Cursor.visible = false;`"
+  },
+  {
+    "question": "Koje svojstvo vraća vrijednost pozicije miša?",
+    "answer": "`Input.mousePosition`"
+  },
+  {
+    "question": "Koje stanje kursora miša zaključava poziciju miša na sredinu ekrana i čini miš nevidljivim?",
+    "answer": "CursorLockMode.Locked"
+  },
+  {
+    "question": "Kojeg tipa treba biti varijabla u koju želimo pohraniti referencu na neku tipku na tipkovnici?",
+    "answer": "KeyCode"
+  },
+  {
+    "question": "Kada želimo kreirati korisničko sučelje, koji objekt prvo moramo dodati na scenu?",
+    "answer": "Canvas"
+  },
+  {
+    "question": "Koja komponenta definira osnovne transformacije objekata korisničkog sučelja?",
+    "answer": "Rect Transform"
+  },
+  {
+    "question": "Koju opciju trebamo iskoristiti ako sliku korisničkog sučelja želimo postaviti na njezinu izvornu veličinu?",
+    "answer": "Set Native Size"
+  },
+  {
+    "question": "Koji je paket potrebno integrirati u projekt kako bi se mogli dodavati tekstualni objekti na korisničko sučelje?",
+    "answer": "TextMeshPro"
+  },
+  {
+    "question": "Putem koje komponente je moguće grupirati objekte korisničkog sučelja u vertikalnu grupu?",
+    "answer": "Vertical Layout Group"
+  },
+  {
+    "question": "Putem koje komponente je moguće grupirati objekte korisničkog sučelja u horizontalnu grupu?",
+    "answer": "Horizontal Layout Group"
+  },
+  {
+    "question": "Koju biblioteku trebamo uključiti u programsku skriptu ako želimo raditi s tekstualnim objektima korisničkog sučelja?",
+    "answer": "TMPro"
+  },
+  {
+    "question": "Putem kojeg događaja možemo definirati akciju koja će se izvršiti prilikom klika na gumb na korisničkom sučelju?",
+    "answer": "On Click"
+  },
+  {
+    "question": "Koje svojstvo definira možemo li vršiti interakciju s gumbom korisničkog sučelja?",
+    "answer": "interactable"
+  },
+  {
+    "question": "Koju biblioteku trebamo uključiti u programsku skriptu ako želimo referencirati klizač korisničkog sučelja?",
+    "answer": "UnityEngine.UI"
+  },
+  {
+    "question": "Kojom metodom možemo preračunati poziciju miša na ekranu u koordinatni sustav svijeta videoigre?",
+    "answer": "`Camera.main.ScreenToWorldPoint`"
+  },
+  {
+    "question": "Putem kojeg svojstva možemo zadavati vrijednost klizaču korisničkog sučelja?",
+    "answer": "value"
+  },
+  {
+    "question": "Putem koje funkcije možemo ispisati poruku u konzolnom prozoru?",
+    "answer": "`Debug.Log`"
+  },
+  {
+    "question": "Koju klasu nasljeđuju standardne programske skripte?",
+    "answer": "MonoBehaviour"
+  },
+  {
+    "question": "Koja metoda se izvršava jednom na početku životnog vijeka nekog objekta?",
+    "answer": "Start"
+  },
+  {
+    "question": "Koja metoda se izvršava prilikom svakog iscrtavanja slike videoigre na ekranu?",
+    "answer": "Update"
+  },
+  {
+    "question": "Koja metoda je najprikladnija za dohvaćanje referenci komponenti?",
+    "answer": "Awake"
+  },
+  {
+    "question": "Koji tip podatka koristimo ako u programu želimo pohraniti cjelobrojnu vrijednost?",
+    "answer": "int"
+  },
+  {
+    "question": "Koji tip podatka koristimo ako u programu želimo pohraniti decimalnu vrijednost?",
+    "answer": "float"
+  },
+  {
+    "question": "Koji tip podatka koristimo za pohranu logičke vrijednosti?",
+    "answer": "bool"
+  },
+  {
+    "question": "Koji tip podatka koristimo za pohranu niza znakova?",
+    "answer": "string"
+  },
+  {
+    "question": "Koju oznaku trebamo koristiti ako želimo da neka varijabla bude vidljiva unutar prozora Inspector?",
+    "answer": "`[SerializeField]`"
+  },
+  {
+    "question": "Ako želimo detektirati koliziju između dva objekta bez fizičke kolizije, ako samo želimo izvršiti neku akciju prilikom kolizije, koje svojstvo mora biti uključeno na komponenti sudarača?",
+    "answer": "Is Trigger"
+  },
+  {
+    "question": "Ako želimo kreirati varijablu u koju želimo pohraniti referencu nekog drugog objekta videoigre, kojeg tipa treba biti kreirana varijabla?",
+    "answer": "GameObject"
+  },
+  {
+    "question": "Ako želimo pohraniti referencu na poziciju nekog objekta videoigre, koji tip varijable trebamo kreirati?",
+    "answer": "Transform"
+  },
+  {
+    "question": "Kako bismo osigurali da se kamera pomiče nakon što se izvrši pomak svih objekata videoigre, u kojoj metodi trebamo implementirati pomak kamere?",
+    "answer": "LateUpdate"
+  },
+  {
+    "question": "Koje svojstvo trebamo koristiti kako bismo klasificirali objekte videoigre u različite kategorije?",
+    "answer": "Oznaku (engl. Tag)"
+  },
+  {
+    "question": "Ako želimo implementirati neko odlučivanje ili izvršavanje programskog koda na temelju nekog logičkog uvjeta, koji konstrukt trebamo koristiti?",
+    "answer": "Selekciju (npr. `if`)"
+  },
+  {
+    "question": "Ako želimo neke linije programskog koda izvršiti više puta, tada trebamo koristiti...",
+    "answer": "Iteracije (npr. `for`)"
+  },
+  {
+    "question": "Koji operator koristimo kod izrade logičkih uvjeta kako bismo usporedili jesu li dva operanda jednaka?",
+    "answer": "`==`"
+  },
+  {
+    "question": "Kako bismo u znakovnu varijablu upisali neki tekst, moramo ga napisati unutar...",
+    "answer": "dvostrukih navodnih znakova"
+  },
+  {
+    "question": "Koji izraz će varijabli brzina dodijeliti vrijednost 5?",
+    "answer": "`=`"
+  },
+  {
+    "question": "Što moramo napisati kako bismo dobili referencu na objekt videoigre na kojem se nalazi skripta unutar koje se nalazi ovaj programski kod?",
+    "answer": "`gameObject`"
+  },
+  {
+    "question": "Koji izraz će deaktivirati objekt koji se nalazi pohranjen u varijabli \"automobil\"?",
+    "answer": "`automobil.SetActive(false);`"
+  },
+  {
+    "question": "Koji izraz će aktivirati objekt koji se nalazi pohranjen u varijabli \"kamion\"?",
+    "answer": "`kamion.SetActive(true);`"
+  },
+  {
+    "question": "Koji izraz koristimo kako bismo dohvatili referencu na neku komponentu koja se nalazi na nekom objektu videoigre?",
+    "answer": "`imeObjekta.GetComponent<tipKomponente>()`"
+  },
+  {
+    "question": "Kako bismo mogli pozvati neku funkciju izvan same skripte gdje je ta funkcija definirana, funkcija mora imati oznaku...",
+    "answer": "public"
+  },
+  {
+    "question": "Kada kreiramo svoju funkciju koja nema nikakvu povratnu vrijednost, tada tip funkcije treba biti...",
+    "answer": "void"
+  },
+  {
+    "question": "Kada kreiramo funkciju koja ima cjelobrojnu povratnu vrijednost, tip funkcije treba biti...",
+    "answer": "int"
+  },
+  {
+    "question": "Koliko cjelobrojnih ulaznih parametara ima sljedeća funkcija:\\\n&#x20;`void MojaFunkcija(int a, float b, int c)`?",
+    "answer": "2"
+  },
+  {
+    "question": "Kako bismo provjerili je li vrijednost varijable \"pomicanje\" različita od nule, trebamo koristiti sljedeći izraz:",
+    "answer": "`pomicanje != 0`"
+  },
+  {
+    "question": "Putem kojeg prozora možete dodati nove pakete u svoj projekt?",
+    "answer": "Package Manager"
+  },
+  {
+    "question": "Kojom metodom je moguće pronaći na sceni objekt određenog tipa?",
+    "answer": "`FindObjectOfType`"
+  },
+  {
+    "question": "Kako se naziva spremnik podataka u koji možemo pohraniti proizvoljnu količinu podataka?",
+    "answer": "ScriptableObject"
+  },
+  {
+    "question": "Što je ispravna sintaksa za kreiranje polja cjelobrojnih vrijednosti?",
+    "answer": "`int[] polje;`"
+  },
+  {
+    "question": "Na koji način pristupamo željenom podatku unutar polja?",
+    "answer": "Putem indeksa"
+  },
+  {
+    "question": "Koje svojstvo polja vraća vrijednost koliko ima elemenata u polju?",
+    "answer": "Length"
+  },
+  {
+    "question": "Koja petlja je prikladna za čitanje svih elemenata iz polja?",
+    "answer": "For"
+  },
+  {
+    "question": "Pomoću koje funkcije možemo dohvatiti referencu na neku komponentu u podređenom objektu?",
+    "answer": "`GetComponentInChildren`"
+  },
+  {
+    "question": "Što je ispravna sintaksa za deklaraciju i inicijalizaciju liste?",
+    "answer": "`List<tip> nazivListe = new List<tip>();`"
+  },
+  {
+    "question": "Koje svojstvo vraća vrijednost koliko ima elemenata u listi?",
+    "answer": "Count"
+  },
+  {
+    "question": "Koju metodu koristimo za generiranje pseudoslučajnih brojeva u nekom rasponu?",
+    "answer": "`Random.Range`"
+  },
+  {
+    "question": "Ako želimo dinamički instancirati neki objekt videoigre moramo napraviti...",
+    "answer": "predložak (engl. Prefab)"
+  },
+  {
+    "question": "Kojom metodom možemo dinamički stvoriti novi objekt videoigre tijekom izvođenja videoigre?",
+    "answer": "`Instantiate`"
+  },
+  {
+    "question": "Koja linija koda omogućava izlazak iz videoigre?",
+    "answer": "`Application.Quit();`"
+  },
+  {
+    "question": "Koju klasu trebamo koristiti ako želimo pohraniti neki podatak u registar računala, podatak koji će ostati pohranjen i nakon što zaustavimo izvođenje videoigre?",
+    "answer": "PlayerPrefs"
+  },
+  {
+    "question": "Kako bi se adekvatno detektirala kolizija između neka dva objekta videoigre, koje komponente treba imati statični nepomični objekt?",
+    "answer": "Neku vrstu sudarača"
+  },
+  {
+    "question": "Što moramo uključiti u jednadžbu kako bismo osigurali jednaku brzinu izvođenja videoigre na svim uređajima?",
+    "answer": "`Time.deltaTime`"
+  },
+  {
+    "question": "Kako bi se adekvatno detektirala kolizija između neka dva objekta videoigre, koje komponente mora imati tijelo koje se pomiče?",
+    "answer": "Neku vrstu sudarača i Rigidbody"
+  },
+  {
+    "question": "Koja komponenta služi za simulaciju fizike krutih tijela?",
+    "answer": "Rigidbody"
+  },
+  {
+    "question": "Ako želimo vršiti fizičku detekciju kolizije između različitih objekata, koje svojstvo mora biti isključeno na komponenti sudarača?",
+    "answer": "Is Trigger"
+  },
+  {
+    "question": "Koja metoda se automatski poziva prilikom fizičke kolizije s nekim drugim objektom videoigre?",
+    "answer": "`OnCollisionEnter` / `OnCollisionEnter2D`"
+  },
+  {
+    "question": "Koja metoda se automatski poziva prilikom kolizije dva objekta kod koje ne vršimo fizičku detekciju kolizije već samo izvršavamo neku akciju?",
+    "answer": "`OnTriggerEnter` / `OnTriggerEnter2D`"
+  },
+  {
+    "question": "Koja metoda se izvršava tijekom fizičke kolizije između dva objekta?",
+    "answer": "`OnCollisionStay` / `OnCollisionStay2D`"
+  },
+  {
+    "question": "Koja metoda se izvršava u trenutku prestanka fizičke kolizije između dva objekta?",
+    "answer": "`OnCollisionExit` / `OnCollisionExit2D`"
+  },
+  {
+    "question": "Ako želimo obrisati neki objekt videoigre, koju metodu trebamo koristiti?",
+    "answer": "`Destroy`"
+  },
+  {
+    "question": "Metoda OnTriggerEnter2D ima jedan ulazni parametar. To je referenca na...",
+    "answer": "sudarač s kojim smo došli u koliziju"
+  },
+  {
+    "question": "Koja vrsta sudarača se koristi kod objekta tipa Sprite Shape?",
+    "answer": "Edge Collider 2D"
+  },
+  {
+    "question": "Koju metodu treba koristiti za implementaciju programske logike koja je vezana za simulaciju fizike?",
+    "answer": "FixedUpdate"
+  },
+  {
+    "question": "Koja metoda se koristi za poziv neke druge metode unutar programske skripte s određenim vremenskim odmakom?",
+    "answer": "Invoke"
+  },
+  {
+    "question": "Što su parametri funkcije Invoke?",
+    "answer": "Naziv funkcije i vrijeme odmaka poziva funkcije"
+  },
+  {
+    "question": "Koje svojstvo nam vraća trenutno vrijeme izvođenja videoigre?",
+    "answer": "`Time.time`"
+  },
+  {
+    "question": "Koju funkciju trebamo koristiti ako želimo dužinu vektora postaviti na jediničnu vrijednost (vrijednost 1)?",
+    "answer": "Normalize"
+  },
+  {
+    "question": "Pomoću koje metode možemo računati udaljenost između dva dvodimenzionalna vektora?",
+    "answer": "`Vector2.Distance`"
+  },
+  {
+    "question": "Pomoću koje metode možemo neki dvodimenzionalni objekt videoigre pomicati prema drugom objektu određenom brzinom?",
+    "answer": "`Vector2.MoveTowards`"
+  },
+  {
+    "question": "Ako želimo definirati sudarač za sprajt nekog nestandardnog oblika, koju vrstu sudarača trebamo koristiti?",
+    "answer": "Polygon Collider 2D"
+  },
+  {
+    "question": "Kako bismo onemogućili detekciju kolizije između dvije vrste objekata, koje svojstvo trebamo prilagoditi?",
+    "answer": "Sloj (engl. Layer)"
+  },
+  {
+    "question": "Metoda Destroy ima jedan opcionalni parametar. Taj parametar predstavlja...",
+    "answer": "vrijeme odgode izvršavanja uništavanja"
+  },
+  {
+    "question": "Koja funkcija radi linearnu interpolaciju između dva dvodimenzionalna vektora?",
+    "answer": "`Vector2.Lerp`"
+  },
+  {
+    "question": "Koje svojstvo treba prilagoditi kada dođe do krivog izračuna detekcije kolizije uslijed velike brzine objekta?",
+    "answer": "Rigidbody > Collision Detection"
+  },
+  {
+    "question": "Kako bismo simulirali pomicanje pokretne trake, potrebno je koristiti komponentu...",
+    "answer": "Surface Effector 2D"
+  },
+  {
+    "question": "Koja metoda služi za dodavanje okretnog momenta objektu?",
+    "answer": "`Rigidbody.AddTorque`"
+  },
+  {
+    "question": "Pomoću koje funkcije možemo ograničiti vrijednost neke varijable određenom minimalnom i maksimalnom vrijednošću?",
+    "answer": "`Mathf.Clamp`"
+  },
+  {
+    "question": "Kojeg tipa treba kreirati funkciju koja će biti korutina?",
+    "answer": "IEnumerator"
+  },
+  {
+    "question": "Kojom naredbom možemo zaustaviti izvođenje korutine kako bi se njezino izvođenje nastavilo kod idućeg iscrtavanja sličice na ekran?",
+    "answer": "`yield return`"
+  },
+  {
+    "question": "Kojom metodom možemo započeti izvođenje neke korutine?",
+    "answer": "`StartCoroutine`"
+  },
+  {
+    "question": "Kako se naziva komponenta koja omogućava kretanje objekta u 3D prostoru te ima u sebi ugrađen sudarač?",
+    "answer": "Character Controller"
+  },
+  {
+    "question": "Koje svojstvo vraća dužinu vektora?",
+    "answer": "magnitude"
+  },
+  {
+    "question": "Kako možemo pročitati vrijednost definirane gravitacije u projektu?",
+    "answer": "`Physics.gravity`"
+  },
+  {
+    "question": "Pomoću koje metode možemo ispucati zraku u nekom smjeru i identificirati mjesto kolizije s nekim objektom videoigre?",
+    "answer": "`Physics.Raycast`"
+  },
+  {
+    "question": "Pomoću koje metode možemo u 3D prostoru neki objekt videoigre zarotirati prema nekom drugom objektu videoigre?",
+    "answer": "`transform.LookAt`"
+  },
+  {
+    "question": "Koju biblioteku moramo uključiti u programsku skriptu ako želimo raditi s objektima navigacijskog područja i navigacijskim agentima?",
+    "answer": "[suspicious link removed]"
+  },
+  {
+    "question": "Ako želimo pohraniti referencu na objekt koji je navigacijski agent, kojeg tipa treba biti ta varijabla?",
+    "answer": "NavMeshAgent"
+  }
+]
