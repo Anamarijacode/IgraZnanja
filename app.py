@@ -180,7 +180,8 @@ with tab_written:
                 placeholder="Ovdje napiši svoj odgovor..."
             )
             if st.button("Provjeri odgovor", type="primary", key=f"check_written_{idx_w}", disabled=not typed.strip()):
-                accepted = q_w.get("accepted_answers", [q_w["answer"]])\n                ok = any(normalize_code(typed) == normalize_code(expected) for expected in accepted)
+                accepted = q_w.get("accepted_answers", [q_w["answer"]])
+                ok = any(normalize_code(typed) == normalize_code(expected) for expected in accepted)
                 answers_w[idx_w] = {"ok": ok, "choice": typed}
                 st.rerun()
         else:
