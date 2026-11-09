@@ -1,15 +1,13 @@
 # Unity i C# kviz
 
-Aplikacija sadrži:
 - 170 ABCD pitanja
-- 92 pitanja za upisivanje C# koda
-- automatsku provjeru pisanih odgovora (zanemaruje razmake i prijelome redaka)
-- rezultat i pregled pitanja za ponavljanje
+- 92 pisana pitanja
+- djelomična provjera pisanog C# koda
+- zeleno označava prepoznate dijelove, crveno pogrešne ili dodatne dijelove
+- prikazuje dijelove rješenja koji nedostaju
 
-## Pokretanje lokalno
+Pokretanje:
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-Za besplatno online pokretanje možeš prenijeti ova četiri fajla na GitHub i povezati repozitorij sa Streamlit Community Cloud.

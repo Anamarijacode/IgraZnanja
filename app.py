@@ -21,6 +21,96 @@ def normalize_code(value):
     # Ignore whitespace only. C# identifiers, punctuation and capitalization remain significant.
     return re.sub(r"\s+", "", value)
 
+
+def code_tokens(value):
+    """Return meaningful C# tokens with their source positions; whitespace is ignored."""
+    pattern = re.compile(
+        r'//[^\n]*|/\*.*?\*/|"(?:\\.|[^"\\])*"|\'(?:\\.|[^\'\\])*\'|'
+        r'[A-Za-z_]\w*|\d+(?:\.\d+)?f?|'
+        r'==|!=|<=|>=|=>|\+\+|--|\+=|-=|&&|\|\||\?\?|::|\?\.|[^\s]',
+        re.S
+    )
+    return [(m.group(0), m.start(), m.end()) for m in pattern.finditer(value or "")]
+
+def compare_code(user_code, expected_answers):
+    """Align code tokens and mark matched tokens, returning best candidate comparison."""
+    from difflib import SequenceMatcher
+
+    user_code = user_code or ""
+    user_tokens = code_tokens(user_code)
+    user_values = [t[0] for t in user_tokens]
+    best = None
+
+    for expected in expected_answers:
+        expected_tokens = code_tokens(expected)
+        expected_values = [t[0] for t in expected_tokens]
+        matcher = SequenceMatcher(a=expected_values, b=user_values, autojunk=False)
+        matched_user = set()
+        matched_expected = set()
+        for block in matcher.get_matching_blocks():
+            for offset in range(block.size):
+                matched_expected.add(block.a + offset)
+                matched_user.add(block.b + offset)
+
+        total = len(expected_values)
+        matched = len(matched_expected)
+        percent = 100 if total == 0 else round(matched / total * 100)
+        candidate = {
+            "expected": expected,
+            "matched_user": matched_user,
+            "matched_expected": matched_expected,
+            "user_tokens": user_tokens,
+            "expected_tokens": expected_tokens,
+            "percent": percent,
+            "exact": normalize_code(user_code) == normalize_code(expected)
+        }
+        if best is None or (candidate["exact"], candidate["percent"]) > (best["exact"], best["percent"]):
+            best = candidate
+
+    return best
+
+def show_code_comparison(user_code, comparison):
+    """Render learner code with matched tokens green and incorrect/extra tokens red."""
+    from html import escape
+
+    tokens = comparison["user_tokens"]
+    matched = comparison["matched_user"]
+    parts = []
+    cursor = 0
+    for i, (token, start, end) in enumerate(tokens):
+        parts.append(escape(user_code[cursor:start]))
+        color = "#16803c" if i in matched else "#d92d20"
+        bg = "#e8f7ed" if i in matched else "#fff0ee"
+        parts.append(
+            f'<span style="color:{color};background:{bg};font-weight:600;border-radius:3px;">'
+            f'{escape(token)}</span>'
+        )
+        cursor = end
+    parts.append(escape(user_code[cursor:]))
+    html_code = "".join(parts) or "<span>(prazan odgovor)</span>"
+    st.markdown(
+        '<div style="border:1px solid #8885;border-radius:8px;padding:12px;'
+        'overflow-x:auto;white-space:pre-wrap;font-family:monospace;line-height:1.55;">'
+        + html_code + '</div>',
+        unsafe_allow_html=True
+    )
+
+    missing = [
+        token for i, (token, _, _) in enumerate(comparison["expected_tokens"])
+        if i not in comparison["matched_expected"]
+    ]
+    if missing:
+        st.markdown("**Dijelovi rješenja koji nedostaju:**")
+        st.markdown(
+            '<div style="color:#d92d20;background:#fff0ee;border-radius:6px;'
+            'padding:8px;font-family:monospace;white-space:pre-wrap;">'
+            + escape(" ".join(missing)) + '</div>',
+            unsafe_allow_html=True
+        )
+    else:
+        st.success("Svi potrebni dijelovi rješenja su prepoznati.")
+
+
 def init_quiz(prefix, total):
     order_key = f"{prefix}_order"
     pos_key = f"{prefix}_pos"
@@ -140,8 +230,9 @@ with tab_written:
     with st.expander("📊 Rezultat pisanog kviza", expanded=False):
         done_w = len(answers_w)
         good_w = sum(v["ok"] is True for v in answers_w.values())
-        bad_w = sum(v["ok"] is False for v in answers_w.values())
-        st.write(f"Odgovoreno: **{done_w}/{Nw}**  ·  Točno: **{good_w}**  ·  Netočno: **{bad_w}**")
+        partial_w = sum(v.get("partial", False) for v in answers_w.values())
+        bad_w = sum(v["ok"] is False and not v.get("partial", False) for v in answers_w.values())
+        st.write(f"Odgovoreno: **{done_w}/{Nw}**  ·  Točno: **{good_w}**  ·  Djelomično: **{partial_w}**  ·  Netočno: **{bad_w}**")
         st.progress(done_w / Nw if Nw else 0)
         if st.button("🔀 Novi nasumični pisani pokušaj", key="reset_written"):
             reset_quiz("written", Nw)
@@ -149,18 +240,22 @@ with tab_written:
 
     if pos_w >= Nw:
         good_w = sum(v["ok"] is True for v in answers_w.values())
-        bad_w = sum(v["ok"] is False for v in answers_w.values())
+        partial_w = sum(v.get("partial", False) for v in answers_w.values())
+        bad_w = sum(v["ok"] is False and not v.get("partial", False) for v in answers_w.values())
         st.success("🏁 Pisani kviz je završen!")
-        st.metric("Točni odgovori", f"{good_w}/{Nw}", f"{round(good_w/Nw*100)}%")
-        st.write(f"Točno: {good_w} · Netočno: {bad_w}")
+        st.metric("Potpuno točni odgovori", f"{good_w}/{Nw}", f"{round(good_w/Nw*100)}%")
+        st.write(f"Točno: {good_w} · Djelomično točno: {partial_w} · Netočno: {bad_w}")
         with st.expander("Pitanja za ponavljanje"):
             for qi, result in answers_w.items():
                 if result["ok"] is not True:
                     q = written[qi]
                     st.markdown(f"**{q['id']}. {q['question']}**")
-                    st.code(result["choice"] or "(prazan odgovor)", language="csharp")
+                    accepted = q.get("accepted_answers", [q["answer"]])
+                    comparison = compare_code(result["choice"], accepted)
+                    st.write("Tvoj odgovor: zeleno = prepoznat dio, crveno = pogrešan ili dodatni dio")
+                    show_code_comparison(result["choice"], comparison)
                     st.write("Točan odgovor prema skripti:")
-                    st.code(q["answer"], language="csharp")
+                    st.code(comparison["expected"], language="csharp")
         if st.button("Ponovi pisani kviz", key="repeat_written", type="primary"):
             reset_quiz("written", Nw)
             st.rerun()
@@ -181,19 +276,28 @@ with tab_written:
             )
             if st.button("Provjeri odgovor", type="primary", key=f"check_written_{idx_w}", disabled=not typed.strip()):
                 accepted = q_w.get("accepted_answers", [q_w["answer"]])
-                ok = any(normalize_code(typed) == normalize_code(expected) for expected in accepted)
-                answers_w[idx_w] = {"ok": ok, "choice": typed}
+                comparison = compare_code(typed, accepted)
+                answers_w[idx_w] = {
+                    "ok": comparison["exact"],
+                    "partial": (not comparison["exact"] and comparison["percent"] > 0),
+                    "percent": comparison["percent"],
+                    "choice": typed
+                }
                 st.rerun()
         else:
+            accepted = q_w.get("accepted_answers", [q_w["answer"]])
+            comparison = compare_code(prev_w["choice"], accepted)
             if prev_w["ok"]:
-                st.success("Točno! 🎉")
+                st.success("Točno! Svi bitni dijelovi koda odgovaraju rješenju. 🎉")
+            elif prev_w.get("partial"):
+                st.warning(f"Djelomično točno: prepoznato je približno {prev_w['percent']}% bitnih dijelova.")
             else:
-                st.error("Odgovor se ne podudara s rješenjem iz skripte.")
-            st.write("Tvoj odgovor:")
-            st.code(prev_w["choice"], language="csharp")
+                st.error("Još nije prepoznat nijedan odgovarajući dio rješenja.")
+            st.write("Tvoj odgovor: zeleno = prepoznat dio, crveno = pogrešan ili dodatni dio")
+            show_code_comparison(prev_w["choice"], comparison)
             st.write("Točan odgovor prema skripti:")
-            st.code(q_w["answer"], language="csharp")
-            st.caption("Provjera zanemaruje razmake i prijelome redaka, ali provjerava nazive, znakove i velika/mala slova.")
+            st.code(comparison["expected"], language="csharp")
+            st.caption("Usporedba gleda redoslijed C# riječi, naziva, brojeva i operatora. Razmaci i prijelomi redaka se zanemaruju.")
 
         c1, c2 = st.columns(2)
         with c1:
